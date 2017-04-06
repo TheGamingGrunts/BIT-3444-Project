@@ -14,3 +14,7 @@ C:\Users\Daniel\Desktop\BIT3444-Project\BIT3444-Project\BIT3444-Project\bin\Debu
 C:\Users\Daniel\Desktop\BIT3444-Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.exe
 C:\Users\Daniel\Desktop\BIT3444-Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.xml
 C:\Users\Daniel\Desktop\BIT3444-Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.pdb
+C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\bin\Debug\BIT3444-Project.exe.config
+C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444-Project.exe
+C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444-Project.xml
+C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444-Project.pdb

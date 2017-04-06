@@ -27,7 +27,6 @@ Partial Class frmOutput
         Me.lblWaiting = New System.Windows.Forms.Label()
         Me.lblDelivered = New System.Windows.Forms.Label()
         Me.lstDelivered = New System.Windows.Forms.ListBox()
-        Me.btnClose = New System.Windows.Forms.Button()
         Me.btnSolve = New System.Windows.Forms.Button()
         Me.rdoSolver = New System.Windows.Forms.RadioButton()
         Me.rdoLabelCorr = New System.Windows.Forms.RadioButton()
@@ -35,9 +34,10 @@ Partial Class frmOutput
         '
         'btnAddOrder
         '
-        Me.btnAddOrder.Location = New System.Drawing.Point(12, 241)
+        Me.btnAddOrder.Location = New System.Drawing.Point(16, 297)
+        Me.btnAddOrder.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAddOrder.Name = "btnAddOrder"
-        Me.btnAddOrder.Size = New System.Drawing.Size(145, 36)
+        Me.btnAddOrder.Size = New System.Drawing.Size(193, 44)
         Me.btnAddOrder.TabIndex = 1
         Me.btnAddOrder.Text = "Add Order"
         Me.btnAddOrder.UseVisualStyleBackColor = True
@@ -45,51 +45,49 @@ Partial Class frmOutput
         'lstWaiting
         '
         Me.lstWaiting.FormattingEnabled = True
-        Me.lstWaiting.Location = New System.Drawing.Point(13, 25)
+        Me.lstWaiting.ItemHeight = 16
+        Me.lstWaiting.Location = New System.Drawing.Point(17, 31)
+        Me.lstWaiting.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.lstWaiting.Name = "lstWaiting"
-        Me.lstWaiting.Size = New System.Drawing.Size(131, 199)
+        Me.lstWaiting.Size = New System.Drawing.Size(173, 244)
         Me.lstWaiting.TabIndex = 2
         '
         'lblWaiting
         '
         Me.lblWaiting.AutoSize = True
-        Me.lblWaiting.Location = New System.Drawing.Point(12, 9)
+        Me.lblWaiting.Location = New System.Drawing.Point(16, 11)
+        Me.lblWaiting.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblWaiting.Name = "lblWaiting"
-        Me.lblWaiting.Size = New System.Drawing.Size(77, 13)
+        Me.lblWaiting.Size = New System.Drawing.Size(103, 17)
         Me.lblWaiting.TabIndex = 3
         Me.lblWaiting.Text = "Waiting Orders"
         '
         'lblDelivered
         '
         Me.lblDelivered.AutoSize = True
-        Me.lblDelivered.Location = New System.Drawing.Point(230, 9)
+        Me.lblDelivered.Location = New System.Drawing.Point(392, 11)
+        Me.lblDelivered.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDelivered.Name = "lblDelivered"
-        Me.lblDelivered.Size = New System.Drawing.Size(86, 13)
+        Me.lblDelivered.Size = New System.Drawing.Size(116, 17)
         Me.lblDelivered.TabIndex = 5
         Me.lblDelivered.Text = "Delivered Orders"
         '
         'lstDelivered
         '
         Me.lstDelivered.FormattingEnabled = True
-        Me.lstDelivered.Location = New System.Drawing.Point(233, 25)
+        Me.lstDelivered.ItemHeight = 16
+        Me.lstDelivered.Location = New System.Drawing.Point(331, 31)
+        Me.lstDelivered.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.lstDelivered.Name = "lstDelivered"
-        Me.lstDelivered.Size = New System.Drawing.Size(134, 199)
+        Me.lstDelivered.Size = New System.Drawing.Size(177, 244)
         Me.lstDelivered.TabIndex = 8
-        '
-        'btnClose
-        '
-        Me.btnClose.Location = New System.Drawing.Point(-3, 321)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(861, 177)
-        Me.btnClose.TabIndex = 9
-        Me.btnClose.Text = "End My Suffering"
-        Me.btnClose.UseVisualStyleBackColor = True
         '
         'btnSolve
         '
-        Me.btnSolve.Location = New System.Drawing.Point(187, 247)
+        Me.btnSolve.Location = New System.Drawing.Point(331, 297)
+        Me.btnSolve.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSolve.Name = "btnSolve"
-        Me.btnSolve.Size = New System.Drawing.Size(129, 30)
+        Me.btnSolve.Size = New System.Drawing.Size(177, 44)
         Me.btnSolve.TabIndex = 10
         Me.btnSolve.Text = "Assign Orders"
         Me.btnSolve.UseVisualStyleBackColor = True
@@ -97,9 +95,10 @@ Partial Class frmOutput
         'rdoSolver
         '
         Me.rdoSolver.AutoSize = True
-        Me.rdoSolver.Location = New System.Drawing.Point(154, 298)
+        Me.rdoSolver.Location = New System.Drawing.Point(17, 367)
+        Me.rdoSolver.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.rdoSolver.Name = "rdoSolver"
-        Me.rdoSolver.Size = New System.Drawing.Size(114, 17)
+        Me.rdoSolver.Size = New System.Drawing.Size(151, 21)
         Me.rdoSolver.TabIndex = 11
         Me.rdoSolver.TabStop = True
         Me.rdoSolver.Text = "Linear Optimization"
@@ -108,9 +107,10 @@ Partial Class frmOutput
         'rdoLabelCorr
         '
         Me.rdoLabelCorr.AutoSize = True
-        Me.rdoLabelCorr.Location = New System.Drawing.Point(299, 298)
+        Me.rdoLabelCorr.Location = New System.Drawing.Point(375, 367)
+        Me.rdoLabelCorr.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.rdoLabelCorr.Name = "rdoLabelCorr"
-        Me.rdoLabelCorr.Size = New System.Drawing.Size(102, 17)
+        Me.rdoLabelCorr.Size = New System.Drawing.Size(133, 21)
         Me.rdoLabelCorr.TabIndex = 12
         Me.rdoLabelCorr.TabStop = True
         Me.rdoLabelCorr.Text = "Label Correcting"
@@ -118,10 +118,9 @@ Partial Class frmOutput
         '
         'frmOutput
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(856, 495)
-        Me.Controls.Add(Me.btnClose)
+        Me.ClientSize = New System.Drawing.Size(537, 431)
         Me.Controls.Add(Me.rdoLabelCorr)
         Me.Controls.Add(Me.rdoSolver)
         Me.Controls.Add(Me.btnSolve)
@@ -130,6 +129,7 @@ Partial Class frmOutput
         Me.Controls.Add(Me.lblWaiting)
         Me.Controls.Add(Me.lstWaiting)
         Me.Controls.Add(Me.btnAddOrder)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmOutput"
         Me.Text = "Output"
         Me.ResumeLayout(False)
@@ -141,7 +141,6 @@ Partial Class frmOutput
     Friend WithEvents lblWaiting As Label
     Friend WithEvents lblDelivered As Label
     Friend WithEvents lstDelivered As ListBox
-    Friend WithEvents btnClose As Button
     Friend WithEvents btnSolve As Button
     Friend WithEvents rdoSolver As RadioButton
     Friend WithEvents rdoLabelCorr As RadioButton
