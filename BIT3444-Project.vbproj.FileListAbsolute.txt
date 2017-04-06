@@ -1,0 +1,12 @@
+C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.exe.config
+C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.exe
+C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.pdb
+C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.xml
+C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.vbprojResolveAssemblyReference.cache
+C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.Resources.resources
+C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.vbproj.GenerateResource.Cache
+C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.exe
+C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.xml
+C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.pdb
+C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\bin\Debug\Database.accdb
+C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmOutput.resources
