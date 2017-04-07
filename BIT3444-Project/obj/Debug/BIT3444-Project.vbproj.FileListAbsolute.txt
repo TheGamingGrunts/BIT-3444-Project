@@ -14,3 +14,5 @@ C:\Users\Daniel\Desktop\BIT3444-Project\BIT3444-Project\BIT3444-Project\bin\Debu
 C:\Users\Daniel\Desktop\BIT3444-Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.exe
 C:\Users\Daniel\Desktop\BIT3444-Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.xml
 C:\Users\Daniel\Desktop\BIT3444-Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.pdb
+C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\bin\Debug\BIT3444-Project.exe.config
+C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\obj\Debug\BIT3444-Project.xml
