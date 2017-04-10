@@ -82,6 +82,12 @@
   <ItemGroup>
     <Compile Include="Arc.vb" />
     <Compile Include="Database.vb" />
+    <Compile Include="Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Network.vb" />
     <Compile Include="Optimization.vb" />
     <Compile Include="Order.vb" />
@@ -111,6 +117,9 @@
     <Compile Include="TArc.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Output.resx">
       <DependentUpon>Output.vb</DependentUpon>
     </EmbeddedResource>

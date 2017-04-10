@@ -28,10 +28,9 @@ Partial Class frmOutput
         Me.lblDelivered = New System.Windows.Forms.Label()
         Me.lstDelivered = New System.Windows.Forms.ListBox()
         Me.btnSolve = New System.Windows.Forms.Button()
-        Me.rdoSolver = New System.Windows.Forms.RadioButton()
-        Me.rdoLabelCorr = New System.Windows.Forms.RadioButton()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnRushOrder = New System.Windows.Forms.Button()
+        Me.btnSettings = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnAddOrder
@@ -94,30 +93,6 @@ Partial Class frmOutput
         Me.btnSolve.Text = "Assign Orders"
         Me.btnSolve.UseVisualStyleBackColor = True
         '
-        'rdoSolver
-        '
-        Me.rdoSolver.AutoSize = True
-        Me.rdoSolver.Location = New System.Drawing.Point(17, 294)
-        Me.rdoSolver.Margin = New System.Windows.Forms.Padding(4)
-        Me.rdoSolver.Name = "rdoSolver"
-        Me.rdoSolver.Size = New System.Drawing.Size(151, 21)
-        Me.rdoSolver.TabIndex = 11
-        Me.rdoSolver.TabStop = True
-        Me.rdoSolver.Text = "Linear Optimization"
-        Me.rdoSolver.UseVisualStyleBackColor = True
-        '
-        'rdoLabelCorr
-        '
-        Me.rdoLabelCorr.AutoSize = True
-        Me.rdoLabelCorr.Location = New System.Drawing.Point(235, 294)
-        Me.rdoLabelCorr.Margin = New System.Windows.Forms.Padding(4)
-        Me.rdoLabelCorr.Name = "rdoLabelCorr"
-        Me.rdoLabelCorr.Size = New System.Drawing.Size(133, 21)
-        Me.rdoLabelCorr.TabIndex = 12
-        Me.rdoLabelCorr.TabStop = True
-        Me.rdoLabelCorr.Text = "Label Correcting"
-        Me.rdoLabelCorr.UseVisualStyleBackColor = True
-        '
         'btnClose
         '
         Me.btnClose.Location = New System.Drawing.Point(310, 422)
@@ -137,15 +112,24 @@ Partial Class frmOutput
         Me.btnRushOrder.Text = "Rush Order"
         Me.btnRushOrder.UseVisualStyleBackColor = True
         '
+        'btnSettings
+        '
+        Me.btnSettings.Location = New System.Drawing.Point(235, 318)
+        Me.btnSettings.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSettings.Name = "btnSettings"
+        Me.btnSettings.Size = New System.Drawing.Size(177, 44)
+        Me.btnSettings.TabIndex = 15
+        Me.btnSettings.Text = "Settings"
+        Me.btnSettings.UseVisualStyleBackColor = True
+        '
         'frmOutput
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(432, 480)
+        Me.Controls.Add(Me.btnSettings)
         Me.Controls.Add(Me.btnRushOrder)
         Me.Controls.Add(Me.btnClose)
-        Me.Controls.Add(Me.rdoLabelCorr)
-        Me.Controls.Add(Me.rdoSolver)
         Me.Controls.Add(Me.btnSolve)
         Me.Controls.Add(Me.lstDelivered)
         Me.Controls.Add(Me.lblDelivered)
@@ -165,8 +149,7 @@ Partial Class frmOutput
     Friend WithEvents lblDelivered As Label
     Friend WithEvents lstDelivered As ListBox
     Friend WithEvents btnSolve As Button
-    Friend WithEvents rdoSolver As RadioButton
-    Friend WithEvents rdoLabelCorr As RadioButton
     Friend WithEvents btnClose As Button
     Friend WithEvents btnRushOrder As Button
+    Friend WithEvents btnSettings As Button
 End Class
