@@ -49,7 +49,11 @@
   <ItemGroup>
     <Reference Include="Microsoft.Solver.Foundation, Version=3.0.2.10889, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+<<<<<<< HEAD
       <HintPath>..\..\..\..\..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.Solver.Foundation\v4.0_3.0.2.10889__31bf3856ad364e35\Microsoft.Solver.Foundation.dll</HintPath>
+=======
+      <HintPath>..\..\..\..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.Solver.Foundation\v4.0_3.0.2.10889__31bf3856ad364e35\Microsoft.Solver.Foundation.dll</HintPath>
+>>>>>>> a2a6d0e550aabfdc170b3075c62ecd80f6253d5d
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -63,6 +67,9 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Import Include="Microsoft.SolverFoundation.Common" />
+    <Import Include="Microsoft.SolverFoundation.Services" />
+    <Import Include="Microsoft.SolverFoundation.Solvers" />
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
@@ -79,6 +86,7 @@
     <Compile Include="Arc.vb" />
     <Compile Include="Database.vb" />
     <Compile Include="Network.vb" />
+    <Compile Include="Optimization.vb" />
     <Compile Include="Order.vb" />
     <Compile Include="Output.vb">
       <SubType>Form</SubType>
@@ -103,6 +111,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Node.vb" />
+    <Compile Include="TArc.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Output.resx">
