@@ -31,11 +31,12 @@ Partial Class frmOutput
         Me.rdoSolver = New System.Windows.Forms.RadioButton()
         Me.rdoLabelCorr = New System.Windows.Forms.RadioButton()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.btnRushOrder = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnAddOrder
         '
-        Me.btnAddOrder.Location = New System.Drawing.Point(13, 361)
+        Me.btnAddOrder.Location = New System.Drawing.Point(13, 370)
         Me.btnAddOrder.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAddOrder.Name = "btnAddOrder"
         Me.btnAddOrder.Size = New System.Drawing.Size(177, 44)
@@ -108,7 +109,7 @@ Partial Class frmOutput
         'rdoLabelCorr
         '
         Me.rdoLabelCorr.AutoSize = True
-        Me.rdoLabelCorr.Location = New System.Drawing.Point(17, 323)
+        Me.rdoLabelCorr.Location = New System.Drawing.Point(235, 294)
         Me.rdoLabelCorr.Margin = New System.Windows.Forms.Padding(4)
         Me.rdoLabelCorr.Name = "rdoLabelCorr"
         Me.rdoLabelCorr.Size = New System.Drawing.Size(133, 21)
@@ -126,11 +127,22 @@ Partial Class frmOutput
         Me.btnClose.Text = "Cancel"
         Me.btnClose.UseVisualStyleBackColor = True
         '
+        'btnRushOrder
+        '
+        Me.btnRushOrder.Location = New System.Drawing.Point(13, 318)
+        Me.btnRushOrder.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnRushOrder.Name = "btnRushOrder"
+        Me.btnRushOrder.Size = New System.Drawing.Size(177, 44)
+        Me.btnRushOrder.TabIndex = 14
+        Me.btnRushOrder.Text = "Rush Order"
+        Me.btnRushOrder.UseVisualStyleBackColor = True
+        '
         'frmOutput
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(432, 480)
+        Me.Controls.Add(Me.btnRushOrder)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.rdoLabelCorr)
         Me.Controls.Add(Me.rdoSolver)
@@ -156,4 +168,5 @@ Partial Class frmOutput
     Friend WithEvents rdoSolver As RadioButton
     Friend WithEvents rdoLabelCorr As RadioButton
     Friend WithEvents btnClose As Button
+    Friend WithEvents btnRushOrder As Button
 End Class
