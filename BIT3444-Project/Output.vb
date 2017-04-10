@@ -37,7 +37,10 @@
             opt.AddVar(order.Origin & order.Destination, 0, 1)
         Next
 
+        'add rest of model & solve here
 
+        Dim orders = From w In waiting
+                     Order By w.length Ascending
 
 
     End Sub
