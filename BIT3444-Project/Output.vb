@@ -14,12 +14,8 @@
         arcSortedList = myDatabase.GetArcs(nodeSortedList)
     End Sub
 
-<<<<<<< HEAD
-    Private Sub btnClose_Click(sender As Object, e As EventArgs)
-=======
     ' Causes close button to stop the program
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) 
->>>>>>> 1c43b7e40a1734c691fa09fd910e18c1654480e5
+    Private Sub btnClose_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
