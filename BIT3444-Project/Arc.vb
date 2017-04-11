@@ -3,7 +3,7 @@
     Public Property TailNode As Node
     Public Property HeadNode As Node
     Public Property Distance As Decimal
-    Public Property CostPerMile As Decimal
+    Public Property Cost As Decimal
     Public Property Capacity As Integer
 
     'Empty/Unused default constructor
@@ -21,7 +21,7 @@
             TailNode = tail
             HeadNode = head
             Distance = dist
-            CostPerMile = cost
+            cost = cost
             ID = TailNode.ID & "-TO-" & HeadNode.ID
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Arc error")

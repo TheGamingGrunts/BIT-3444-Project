@@ -61,7 +61,7 @@
             'create objective
             opt.AddObj("obj")
             For Each a In arcSortedList.Values
-                opt.SetCoef("obj", a.ID, a.Distance)
+                opt.SetCoef("obj", a.ID, a.Cost) 'a.distance
             Next
 
             opt.SolveModel("obj", True)
@@ -73,7 +73,7 @@
                     For Each a In n.ArcsOut
                         If opt.GetVarValue(a.ID) > 0.1 Then
                             list.Add(a)
-                            length += a.Distance
+                            length += a.Cost 'a.distance
                             n = a.HeadNode
                             Exit For
                         End If
