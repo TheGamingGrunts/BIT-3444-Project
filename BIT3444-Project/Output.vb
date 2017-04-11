@@ -1,5 +1,6 @@
 ﻿Public Class frmOutput
 
+    Dim myNet As New Network
     Dim myDatabase As Database
     Dim arcSortedList As SortedList(Of String, Arc)
     Dim nodeSortedList As SortedList(Of String, Node)
@@ -86,4 +87,59 @@
         Next
         Return Nothing
     End Function
+
+    Private Sub LabelCorrecting()
+        BuildNetwork()
+        lstWaiting.Items.Clear()
+        Dim newOrderList As New List(Of Order)
+
+        Dim cityList = From city In myNet.NodeList.Values
+                       Order By city.ArcsOut.Count Descending, city.ID
+
+        For Each o In orderList
+            For Each city In cityList
+                Dim c1 As String = city.ID
+                Dim origTNode As New TreeNode(c1)
+                For Each c2 In myNet.NodeList.Keys
+                    Dim length As Decimal
+                    Dim list As List(Of TArc) = myNet.ShortestPath(c1, c2, length)
+                    If list IsNot Nothing Then
+                        newOrderList.Add(New Order(c1, c2, list, length))
+                        Dim destTNode As New TreeNode(c2)
+                        origTNode.Nodes.Add(destTNode)
+                    End If
+                Next
+            Next
+        Next
+
+        orderList.Clear()
+        orderList = newOrderList
+
+        For Each o In orderList
+            lstWaiting.Items.Add(o)
+        Next
+    End Sub
+
+    Public Sub BuildNetwork()
+        myDatabase = New Database()
+        myNet.NodeList.Clear()
+        myNet.ArcList.Clear()
+        For i As Integer = 1 To myDatabase.GetNumNodes
+            myNet += myDatabase.GetNodeName(i)
+        Next
+        For Each c1 In myNet.NodeList.Keys
+            For Each c2 In myNet.NodeList.Keys
+                Dim dist As Decimal = myDatabase.GetDistance(c1, c2)
+                If c1 <> c2 And dist > 0 Then
+                    myNet.AddArc(c1, c2)
+                    Dim a As Arc = myNet.GetArc(c1, c2)
+                    a.Distance = dist
+                    a.Capacity = 1
+                End If
+            Next
+        Next
+
+        MessageBox.Show("Network has been created with " & myDatabase.GetNumNodes &
+                        " nodes and " & myDatabase.GetNumArcs & " arcs.")
+    End Sub
 End Class

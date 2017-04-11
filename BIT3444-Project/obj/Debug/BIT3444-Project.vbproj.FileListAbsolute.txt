@@ -1,30 +1,13 @@
-C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.exe.config
-C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.exe
-C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.pdb
-C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.xml
-C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.vbprojResolveAssemblyReference.cache
-C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.Resources.resources
-C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.vbproj.GenerateResource.Cache
-C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.exe
-C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.xml
-C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.pdb
-C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\bin\Debug\Database.accdb
-C:\BIT3444\Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmOutput.resources
-C:\Users\Daniel\Desktop\BIT3444-Project\BIT3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.exe.config
-C:\Users\Daniel\Desktop\BIT3444-Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.exe
-C:\Users\Daniel\Desktop\BIT3444-Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.xml
-C:\Users\Daniel\Desktop\BIT3444-Project\BIT3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.pdb
-<<<<<<< HEAD
-C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\bin\Debug\BIT3444-Project.exe.config
-C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\obj\Debug\BIT3444-Project.xml
-=======
-C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\bin\Debug\BIT3444-Project.exe.config
-C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444-Project.exe
-C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444-Project.xml
-C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444-Project.pdb
->>>>>>> 7f52265a5cb0507f04f39380977b7443aa12dc15
-C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444-Project.vbprojResolveAssemblyReference.cache
-C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmOutput.resources
-C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444_Project.Resources.resources
-C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444-Project.vbproj.GenerateResource.Cache
-C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmSettings.resources
+C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\bin\Debug\Database.accdb
+C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.exe.config
+C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.exe
+C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.pdb
+C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.xml
+C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\bin\Debug\Microsoft.Solver.Foundation.dll
+C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmSettings.resources
+C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmOutput.resources
+C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.Resources.resources
+C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.vbproj.GenerateResource.Cache
+C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.exe
+C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.xml
+C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.pdb

@@ -2,10 +2,15 @@
 
 Public Class Database
     Private myDataSet As New DataSet
+    Private nodesDA As OleDbDataAdapter
+    Private arcsDA As OleDbDataAdapter
 
-    'Empty/Unused default constructor
     Public Sub New()
+        nodesDA = GetDataAdapter("SELECT * FROM Cities")
+        nodesDA.Fill(myDataSet, "Cities")
 
+        arcsDA = GetDataAdapter("SELECT * FROM Arcs")
+        arcsDA.Fill(myDataSet, "Arcs")
     End Sub
 
     'Returns the data adapter for accessing the database
@@ -17,10 +22,6 @@ Public Class Database
 
     'Returns the list of cities that can be visited
     Public Function GetNodes() As SortedList(Of String, Node)
-        Dim nodes As OleDbDataAdapter
-        nodes = GetDataAdapter("SELECT * FROM Cities")
-        nodes.Fill(myDataSet, "Cities")
-
         Dim nodeSList As New SortedList(Of String, Node)
         For i As Integer = 0 To (myDataSet.Tables("Cities").Rows.Count - 1)
             Dim nodeName As String = myDataSet.Tables("Cities").Rows(i)("City")
@@ -33,17 +34,13 @@ Public Class Database
 
     'Returns a list of all arcs on the map
     Public Function GetArcs(nodeList As SortedList(Of String, Node)) As SortedList(Of String, Arc)
-        Dim arcs As OleDbDataAdapter
-        arcs = GetDataAdapter("SELECT * FROM Arcs")
-        arcs.Fill(myDataSet, "Arcs")
-
         Dim arcSList As New SortedList(Of String, Arc)
         For i As Integer = 0 To (myDataSet.Tables("Arcs").Rows.Count - 1)
             Dim headNode As Node = nodeList(myDataSet.Tables("Arcs").Rows(i)("Head City"))
             Dim tailNode As Node = nodeList(myDataSet.Tables("Arcs").Rows(i)("Tail City"))
             Dim distance As Double = myDataSet.Tables("Arcs").Rows(i)("Distance")
             Dim cost As Double = myDataSet.Tables("Arcs").Rows(i)("Cost")
-            Dim capacity As Integer = myDataSet.Tables("Arcs").Rows(i)("Capacity")
+            'Dim capacity As Integer = myDataSet.Tables("Arcs").Rows(i)("Capacity")
             Dim newArc As New Arc(tailNode, headNode, distance, cost)
 
             tailNode.ArcsOut.Add(newArc)
@@ -53,4 +50,63 @@ Public Class Database
 
         Return arcSList
     End Function
+
+    Public Function GetNumNodes() As Integer
+        Return myDataSet.Tables("Cities").Rows.Count
+    End Function
+
+    Public Function GetNumArcs() As Integer
+        Return myDataSet.Tables("Arcs").Rows.Count
+    End Function
+
+    Public Function GetNodeName(id As Integer) As String
+        Dim r() As DataRow = myDataSet.Tables("Cities").Select("ID = " & id)
+        If r.Length > 0 Then
+            Return r(0)("Name")
+        Else
+            Return Nothing
+        End If
+    End Function
+
+    Public Function GetNodeID(name As String) As Integer
+        Dim r() As DataRow = myDataSet.Tables("Cities").Select("Name = '" & name & "'")
+        If r.Length > 0 Then
+            Return r(0)("ID")
+        Else
+            Return -1
+        End If
+    End Function
+
+    Public Function GetDistance(name1 As String, name2 As String) As Decimal
+        Dim i1 As Integer = GetNodeID(name1)
+        Dim i2 As Integer = GetNodeID(name2)
+        Dim r() As DataRow = myDataSet.Tables("Arcs").Select("Tail = " & i1 & " AND Head = " & i2)
+        If r.Length > 0 Then
+            Return r(0)("Distance")
+        Else
+            Return -1
+        End If
+    End Function
+
+    Public Sub ModifyArc(name1 As String, name2 As String, dist As Decimal)
+        Dim i1 As Integer = GetNodeID(name1)
+        Dim i2 As Integer = GetNodeID(name2)
+        Dim r() As DataRow = myDataSet.Tables("Arcs").Select("Tail = " & i1 & " AND Head = " & i2)
+        r(0).BeginEdit()
+        r(0)("Distance") = dist
+        r(0).EndEdit()
+    End Sub
+
+    Public Sub UpdateDatabase()
+        Dim myCommandBuilder As New OleDbCommandBuilder(arcsDA)
+
+        arcsDA.UpdateCommand = myCommandBuilder.GetUpdateCommand
+        arcsDA.InsertCommand = myCommandBuilder.GetInsertCommand
+        arcsDA.DeleteCommand = myCommandBuilder.GetDeleteCommand
+
+        Dim updateCount As Integer = arcsDA.Update(myDataSet.Tables("Arcs"))
+        MessageBox.Show(updateCount & " records updated.")
+
+    End Sub
 End Class
+
