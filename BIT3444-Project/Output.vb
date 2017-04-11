@@ -29,19 +29,61 @@
 
     End Sub
 
-    Public Sub LinearOptimization()
+    Public Function SolverOptimization(orig As String, dest As String, ByRef length As Double) As List(Of TArc)
         Dim opt As New Optimization
         opt.InitSolver()
 
-        For Each order In orderList
-            opt.AddVar(order.Origin & order.Destination, 0, 1)
+        Dim inf As Double = Double.MaxValue
+
+        For Each a In arcSortedList.Values
+            opt.AddVar(a.ID, 0, 1)
         Next
 
-        'add rest of model & solve here
+        For Each n In nodeSortedList.Values
+            Dim rhs As Integer
+            Select Case n.ID
+                Case orig
+                    rhs = -1
+                Case dest
+                    rhs = 1
+                Case Else
+                    rhs = 0
+            End Select
+            opt.AddFun(n.ID, rhs, rhs)
+            For Each a In n.ArcsIn
+                opt.SetCoef(n.ID, a.ID, 1)
+            Next
+            For Each a In n.ArcsOut
+                opt.SetCoef(n.ID, a.ID, -1)
+            Next
 
-        Dim orders = From w In waiting
-                     Order By w.length Ascending
+            'create objective
+            opt.AddObj("obj")
+            For Each a In arcSortedList.Values
+                opt.SetCoef("obj", a.ID, a.Distance)
+            Next
 
+            opt.SolveModel("obj", True)
 
-    End Sub
+            If opt.IsOptimal() Then
+                Dim list As New List(Of TArc)
+                Dim node As Node = nodeSortedList(orig)
+                Do While n.ID <> dest
+                    For Each a In n.ArcsOut
+                        If opt.GetVarValue(a.ID) > 0.1 Then
+                            list.Add(a)
+                            length += a.Distance
+                            n = a.HeadNode
+                            Exit For
+                        End If
+                    Next
+                Loop
+                Return list
+            Else
+                length = inf
+                Return Nothing
+            End If
+        Next
+        Return Nothing
+    End Function
 End Class

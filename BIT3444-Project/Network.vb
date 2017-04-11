@@ -102,7 +102,7 @@
 
         ' initialization
         For Each a In ArcList.Values
-            a.Flow = 0
+            a.Capacity = 0 'a.Flow
         Next
         For Each n In NodeList.Values
             tempList.Add(n.ID)
@@ -125,11 +125,11 @@
             Do Until permList.Contains(dest) ' tempList.Count > 0
                 'Update labels
                 For Each a2 In ArcList.Values
-                    If permList.Contains(a2.Tail.ID) And tempList.Contains(a2.Head.ID) Then
-                        Dim newlabel = labelList(a2.Tail.ID) + a2.Cost
-                        If newlabel < labelList(a2.Head.ID) Then
-                            labelList(a2.Head.ID) = newlabel
-                            trackList(a2.Head.ID) = a2
+                    If permList.Contains(a2.TailNode.ID) And tempList.Contains(a2.HeadNode.ID) Then
+                        Dim newlabel = labelList(a2.TailNode.ID) + a2.Distance
+                        If newlabel < labelList(a2.HeadNode.ID) Then
+                            labelList(a2.HeadNode.ID) = newlabel
+                            trackList(a2.HeadNode.ID) = a2
                         End If
                     End If
                 Next
@@ -154,18 +154,18 @@
             ' backtrack shortest path
             Dim path As New List(Of TArc)
             Dim a As TArc = trackList(dest)
-            a.Flow = 1
+            a.Capacity = 1 'a.flow
             Do
                 path.Insert(0, a)
-                If a.Tail.ID <> orig And a.Head.ID <> dest Then
+                If a.TailNode.ID <> orig And a.HeadNode.ID <> dest Then
                     Dim origdest(1) As String
                     origdest(0) = orig
                     origdest(1) = dest
                     a.PathList.Add(origdest)
                 End If
-                a = trackList(a.Tail.ID)
+                a = trackList(a.TailNode.ID)
                 If a IsNot Nothing Then
-                    a.Flow = 1
+                    a.Capacity = 1 'a.Flow
                 End If
             Loop Until a Is Nothing
             length = labelList(dest)
