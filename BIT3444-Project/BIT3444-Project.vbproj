@@ -80,6 +80,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddOrder.Designer.vb">
+      <DependentUpon>AddOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Arc.vb" />
     <Compile Include="Database.vb" />
     <Compile Include="frmSettings.Designer.vb">
@@ -117,6 +123,9 @@
     <Compile Include="TArc.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddOrder.resx">
+      <DependentUpon>AddOrder.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSettings.resx">
       <DependentUpon>frmSettings.vb</DependentUpon>
     </EmbeddedResource>
