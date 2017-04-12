@@ -7,6 +7,7 @@
     Dim orderList As List(Of Order)
     Dim waiting As List(Of Order)
     Dim delivered As List(Of Order)
+    Dim settingsForm As New frmSettings
 
     'Initializes the class variables
     Private Sub frmMap_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -141,5 +142,59 @@
 
         MessageBox.Show("Network has been created with " & myDatabase.GetNumNodes &
                         " nodes and " & myDatabase.GetNumArcs & " arcs.")
+    End Sub
+
+    'Sorts the waiting list in ascending or descending order based on length
+    Private Sub SortWaitingList()
+    Dim newWaiting As List(Of Order)
+    If settingsForm.rdoAscending.Checked Then
+        newWaiting = From orders In waiting
+                     Order By orders.length Ascending, orders.Origin
+    Else
+        newWaiting = From orders In waiting
+                     Order By orders.length Descending, orders.Origin
+    End If
+    waiting = newWaiting
+
+    lstWaiting.Items.Clear()
+    For Each o In waiting
+        lstWaiting.Items.Add(o)
+    Next
+End Sub
+
+'goes through the waiting list and moves orders to the delivered list if they path is clear
+Private Sub deliverOrders()
+    Dim pathIsClear As Boolean
+
+    For Each o In waiting
+        pathIsClear = True
+        For Each a In o.Path
+            If myNet.GetArc(a.TailNode.ToString, a.HeadNode.ToString).Capacity <= 0 Then
+                pathIsClear = False
+            End If
+
+            If pathIsClear = False Then
+                Exit For
+            End If
+        Next
+
+        If pathIsClear Then
+            delivered.Add(o)
+            For Each a In o.Path
+                myNet.GetArc(a.TailNode.ToString, a.HeadNode.ToString).Capacity -= 1
+            Next
+            waiting.Remove(o)
+        End If
+    Next
+
+    For Each a In myNet.ArcList.Values
+        If myNet.GetArc(a.TailNode.ToString, a.HeadNode.ToString).Capacity = 0 Then
+            myNet.ArcList.Remove(a.ID)
+        End If
+    Next
+End Sub
+
+Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
+        settingsForm.Show()
     End Sub
 End Class
