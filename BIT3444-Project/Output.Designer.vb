@@ -50,7 +50,7 @@ Partial Class frmOutput
         Me.lstWaiting.Location = New System.Drawing.Point(17, 31)
         Me.lstWaiting.Margin = New System.Windows.Forms.Padding(4)
         Me.lstWaiting.Name = "lstWaiting"
-        Me.lstWaiting.Size = New System.Drawing.Size(173, 244)
+        Me.lstWaiting.Size = New System.Drawing.Size(173, 276)
         Me.lstWaiting.TabIndex = 2
         '
         'lblWaiting
@@ -80,7 +80,7 @@ Partial Class frmOutput
         Me.lstDelivered.Location = New System.Drawing.Point(235, 32)
         Me.lstDelivered.Margin = New System.Windows.Forms.Padding(4)
         Me.lstDelivered.Name = "lstDelivered"
-        Me.lstDelivered.Size = New System.Drawing.Size(177, 244)
+        Me.lstDelivered.Size = New System.Drawing.Size(177, 276)
         Me.lstDelivered.TabIndex = 8
         '
         'btnSolve
@@ -138,7 +138,7 @@ Partial Class frmOutput
         Me.Controls.Add(Me.btnAddOrder)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmOutput"
-        Me.Text = "Output"
+        Me.Text = "Order Queue"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
