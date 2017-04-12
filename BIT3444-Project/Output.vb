@@ -16,7 +16,7 @@
     End Sub
 
     ' Causes close button to stop the program
-    Private Sub btnClose_Click(sender As Object, e As EventArgs)
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()
     End Sub
 
