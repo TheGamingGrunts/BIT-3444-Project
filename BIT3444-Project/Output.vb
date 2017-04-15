@@ -4,10 +4,11 @@
     Dim myDatabase As Database
     Dim arcSortedList As SortedList(Of String, Arc)
     Dim nodeSortedList As SortedList(Of String, Node)
-    Dim orderList As List(Of Order)
+    Public Shared orderList As List(Of Order)
     Dim waiting As List(Of Order)
     Dim delivered As List(Of Order)
     Dim settingsForm As New frmSettings
+    Public Shared solveOption As Boolean
 
     'Initializes the class variables
     Private Sub frmMap_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -23,7 +24,12 @@
 
     ' Causes solve button to solve an optimization for routes based on orders
     Private Sub btnSolve_Click(sender As Object, e As EventArgs) Handles btnSolve.Click
-
+        If solveOption Then
+            LabelCorrecting()
+            SortWaitingList()
+        Else
+            'SolverOptimization()
+        End If
     End Sub
 
     ' Opens a form that allows the user to add an order
