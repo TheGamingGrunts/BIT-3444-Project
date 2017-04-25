@@ -3,11 +3,16 @@
 
     End Sub
 
+    'Apply the settings input by the user
     Private Sub btnApply_Click(sender As Object, e As EventArgs) Handles btnApply.Click
         If rdoLinearOptimization.Checked Then
             frmOutput.solveOption = True
         Else
             frmOutput.solveOption = False
         End If
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Me.Close()
     End Sub
 End Class
