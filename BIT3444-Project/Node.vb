@@ -1,5 +1,7 @@
 ﻿Public Class Node
     Public Property ID As String
+    Public Property Xcoord As Integer
+    Public Property Ycoord As Integer
     Public Property ArcsIn As List(Of Arc)
     Public Property ArcsOut As List(Of Arc)
 

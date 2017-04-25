@@ -26,6 +26,8 @@ Public Class Database
         For i As Integer = 0 To (myDataSet.Tables("Cities").Rows.Count - 1)
             Dim nodeName As String = myDataSet.Tables("Cities").Rows(i)("City")
             Dim newNode As New Node(nodeName)
+            newNode.Xcoord = myDataSet.Tables("Cities").Rows(i)("X-Coord")
+            newNode.Ycoord = myDataSet.Tables("Cities").Rows(i)("Y-Coord")
             nodeSList.Add(nodeName, newNode)
         Next
 
