@@ -39,5 +39,3 @@ C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repos
 C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\obj\Debug\BIT3444_Project.frmOutput.resources
 C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\obj\Debug\BIT3444_Project.Resources.resources
 C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\obj\Debug\BIT3444-Project.vbproj.GenerateResource.Cache
-C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.vbprojResolveAssemblyReference.cache
-C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmAddOrder.resources

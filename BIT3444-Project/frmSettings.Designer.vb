@@ -28,28 +28,22 @@ Partial Class frmSettings
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.rdoAscending = New System.Windows.Forms.RadioButton()
         Me.rdoDescending = New System.Windows.Forms.RadioButton()
-        Me.grpSolveType = New System.Windows.Forms.GroupBox()
-        Me.grpSort = New System.Windows.Forms.GroupBox()
-        Me.grpSolveType.SuspendLayout()
-        Me.grpSort.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnApply
         '
-        Me.btnApply.Location = New System.Drawing.Point(9, 193)
-        Me.btnApply.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnApply.Location = New System.Drawing.Point(12, 238)
         Me.btnApply.Name = "btnApply"
-        Me.btnApply.Size = New System.Drawing.Size(124, 46)
+        Me.btnApply.Size = New System.Drawing.Size(166, 57)
         Me.btnApply.TabIndex = 0
         Me.btnApply.Text = "Apply"
         Me.btnApply.UseVisualStyleBackColor = True
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(166, 193)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCancel.Location = New System.Drawing.Point(221, 238)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(124, 46)
+        Me.btnCancel.Size = New System.Drawing.Size(166, 57)
         Me.btnCancel.TabIndex = 1
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
@@ -57,10 +51,9 @@ Partial Class frmSettings
         'rdoLinearOptimization
         '
         Me.rdoLinearOptimization.AutoSize = True
-        Me.rdoLinearOptimization.Location = New System.Drawing.Point(5, 18)
-        Me.rdoLinearOptimization.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.rdoLinearOptimization.Location = New System.Drawing.Point(12, 33)
         Me.rdoLinearOptimization.Name = "rdoLinearOptimization"
-        Me.rdoLinearOptimization.Size = New System.Drawing.Size(114, 17)
+        Me.rdoLinearOptimization.Size = New System.Drawing.Size(151, 21)
         Me.rdoLinearOptimization.TabIndex = 2
         Me.rdoLinearOptimization.TabStop = True
         Me.rdoLinearOptimization.Text = "Linear Optimization"
@@ -69,10 +62,9 @@ Partial Class frmSettings
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(5, 39)
-        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.RadioButton2.Location = New System.Drawing.Point(12, 60)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(102, 17)
+        Me.RadioButton2.Size = New System.Drawing.Size(133, 21)
         Me.RadioButton2.TabIndex = 3
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Label Correcting"
@@ -81,10 +73,9 @@ Partial Class frmSettings
         'rdoAscending
         '
         Me.rdoAscending.AutoSize = True
-        Me.rdoAscending.Location = New System.Drawing.Point(6, 18)
-        Me.rdoAscending.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.rdoAscending.Location = New System.Drawing.Point(221, 33)
         Me.rdoAscending.Name = "rdoAscending"
-        Me.rdoAscending.Size = New System.Drawing.Size(75, 17)
+        Me.rdoAscending.Size = New System.Drawing.Size(95, 21)
         Me.rdoAscending.TabIndex = 4
         Me.rdoAscending.TabStop = True
         Me.rdoAscending.Text = "Ascending"
@@ -93,54 +84,29 @@ Partial Class frmSettings
         'rdoDescending
         '
         Me.rdoDescending.AutoSize = True
-        Me.rdoDescending.Location = New System.Drawing.Point(6, 39)
-        Me.rdoDescending.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.rdoDescending.Location = New System.Drawing.Point(221, 60)
         Me.rdoDescending.Name = "rdoDescending"
-        Me.rdoDescending.Size = New System.Drawing.Size(82, 17)
+        Me.rdoDescending.Size = New System.Drawing.Size(104, 21)
         Me.rdoDescending.TabIndex = 5
         Me.rdoDescending.TabStop = True
         Me.rdoDescending.Text = "Descending"
         Me.rdoDescending.UseVisualStyleBackColor = True
         '
-        'grpSolveType
-        '
-        Me.grpSolveType.Controls.Add(Me.RadioButton2)
-        Me.grpSolveType.Controls.Add(Me.rdoLinearOptimization)
-        Me.grpSolveType.Location = New System.Drawing.Point(22, 12)
-        Me.grpSolveType.Name = "grpSolveType"
-        Me.grpSolveType.Size = New System.Drawing.Size(123, 68)
-        Me.grpSolveType.TabIndex = 6
-        Me.grpSolveType.TabStop = False
-        Me.grpSolveType.Text = "Solution Method"
-        '
-        'grpSort
-        '
-        Me.grpSort.Controls.Add(Me.rdoDescending)
-        Me.grpSort.Controls.Add(Me.rdoAscending)
-        Me.grpSort.Location = New System.Drawing.Point(173, 12)
-        Me.grpSort.Name = "grpSort"
-        Me.grpSort.Size = New System.Drawing.Size(103, 68)
-        Me.grpSort.TabIndex = 7
-        Me.grpSort.TabStop = False
-        Me.grpSort.Text = "Sort By"
-        '
         'frmSettings
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(299, 261)
-        Me.Controls.Add(Me.grpSort)
-        Me.Controls.Add(Me.grpSolveType)
+        Me.ClientSize = New System.Drawing.Size(399, 321)
+        Me.Controls.Add(Me.rdoDescending)
+        Me.Controls.Add(Me.rdoAscending)
+        Me.Controls.Add(Me.RadioButton2)
+        Me.Controls.Add(Me.rdoLinearOptimization)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnApply)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "frmSettings"
         Me.Text = "Settings"
-        Me.grpSolveType.ResumeLayout(False)
-        Me.grpSolveType.PerformLayout()
-        Me.grpSort.ResumeLayout(False)
-        Me.grpSort.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -150,6 +116,4 @@ Partial Class frmSettings
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents rdoAscending As RadioButton
     Friend WithEvents rdoDescending As RadioButton
-    Friend WithEvents grpSolveType As GroupBox
-    Friend WithEvents grpSort As GroupBox
 End Class
