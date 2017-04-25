@@ -127,6 +127,7 @@ Partial Class frmOutput
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(432, 480)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnSettings)
         Me.Controls.Add(Me.btnRushOrder)
         Me.Controls.Add(Me.btnClose)
