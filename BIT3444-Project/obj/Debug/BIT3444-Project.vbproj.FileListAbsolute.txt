@@ -53,3 +53,4 @@ C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.fr
 C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmContainer.resources
 C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmMap.resources
 >>>>>>> d7f240c4cab277af99c9410e04df299274666645
+C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\obj\Debug\BIT3444_Project.frmWelcome.resources

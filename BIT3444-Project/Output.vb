@@ -1,4 +1,4 @@
-﻿Public Class frmOutput
+﻿Public Class frmOrderQueue
 
     Dim myNet As New Network
     Dim myDatabase As Database

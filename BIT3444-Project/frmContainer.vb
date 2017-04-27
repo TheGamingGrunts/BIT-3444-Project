@@ -2,7 +2,7 @@
     Private Sub frmContainer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         spcMain.Dock = DockStyle.Fill
 
-        Dim output As New frmOutput
+        Dim output As New frmOrderQueue
         output.MdiParent = Me
         spcMain.Panel1.Controls.Add(output)
         output.WindowState = FormWindowState.Maximized
