@@ -1,4 +1,4 @@
-﻿Public Class frmOutput
+﻿Public Class frmOrderQueue
 
     Dim myNet As New Network
     Dim myDatabase As Database
@@ -19,7 +19,7 @@
 
     ' Causes close button to stop the program
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Me.Close()
+        frmContainer.Close()
     End Sub
 
     ' Causes solve button to solve an optimization for routes based on orders

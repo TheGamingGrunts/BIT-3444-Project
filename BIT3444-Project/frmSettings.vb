@@ -6,9 +6,9 @@
     'Apply the settings input by the user
     Private Sub btnApply_Click(sender As Object, e As EventArgs) Handles btnApply.Click
         If rdoLinearOptimization.Checked Then
-            frmOutput.solveOption = True
+            frmOrderQueue.solveOption = True
         Else
-            frmOutput.solveOption = False
+            frmOrderQueue.solveOption = False
         End If
     End Sub
 
