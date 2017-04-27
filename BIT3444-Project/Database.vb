@@ -26,8 +26,8 @@ Public Class Database
         For i As Integer = 0 To (myDataSet.Tables("Cities").Rows.Count - 1)
             Dim nodeName As String = myDataSet.Tables("Cities").Rows(i)("City")
             Dim newNode As New Node(nodeName)
-            newNode.Xcoord = myDataSet.Tables("Cities").Rows(i)("X-Coord")
-            newNode.Ycoord = myDataSet.Tables("Cities").Rows(i)("Y-Coord")
+            'newNode.Xcoord = myDataSet.Tables("Cities").Rows(i)("X-Coord")
+            'newNode.Ycoord = myDataSet.Tables("Cities").Rows(i)("Y-Coord")
             nodeSList.Add(nodeName, newNode)
         Next
 
@@ -64,7 +64,7 @@ Public Class Database
     Public Function GetNodeName(id As Integer) As String
         Dim r() As DataRow = myDataSet.Tables("Cities").Select("ID = " & id)
         If r.Length > 0 Then
-            Return r(0)("Name")
+            Return r(0)("City")
         Else
             Return Nothing
         End If

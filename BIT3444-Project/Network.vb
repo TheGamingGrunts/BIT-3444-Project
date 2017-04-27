@@ -9,7 +9,7 @@
     Public Sub New()
         database = New Database
         NodeList = database.GetNodes()
-        'ArcList = database.GetArcs()
+        ArcList = database.GetArcs(NodeList)
     End Sub
 
     Public ReadOnly Property NodeCount As Integer
@@ -26,10 +26,14 @@
 
     Public Function AddNode(id As String) As Boolean
         Try
+
+            MessageBox.Show(id)
+
             If NodeList.ContainsKey(id) Then
                 Throw New Exception("Node " & id & " already exists.")
             End If
             Dim node As New Node(id)
+
             NodeList.Add(id, node)
             'add node X & Y coords
             RaiseEvent Changed(Me)

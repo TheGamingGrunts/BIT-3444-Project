@@ -8,7 +8,7 @@
     Dim waiting As List(Of Order)
     Dim delivered As List(Of Order)
     Dim settingsForm As New frmSettings
-    Public Shared solveOption As Boolean
+    Public Shared solveOption As Boolean = True
 
     'Initializes the class variables
     Private Sub frmMap_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -131,8 +131,17 @@
         myDatabase = New Database()
         myNet.NodeList.Clear()
         myNet.ArcList.Clear()
+
+        MessageBox.Show(myDatabase.GetNumNodes)
+
         For i As Integer = 1 To myDatabase.GetNumNodes
+
+            MessageBox.Show("before " & i)
+
             myNet += myDatabase.GetNodeName(i)
+
+            MessageBox.Show("after " & i)
+
         Next
         For Each c1 In myNet.NodeList.Keys
             For Each c2 In myNet.NodeList.Keys
