@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmOutput
+Partial Class frmOrderQueue
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -122,7 +122,7 @@ Partial Class frmOutput
         Me.btnSettings.Text = "Settings"
         Me.btnSettings.UseVisualStyleBackColor = True
         '
-        'frmOutput
+        'frmOrderQueue
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -138,7 +138,7 @@ Partial Class frmOutput
         Me.Controls.Add(Me.lstWaiting)
         Me.Controls.Add(Me.btnAddOrder)
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "frmOutput"
+        Me.Name = "frmOrderQueue"
         Me.Text = "Order Queue"
         Me.ResumeLayout(False)
         Me.PerformLayout()

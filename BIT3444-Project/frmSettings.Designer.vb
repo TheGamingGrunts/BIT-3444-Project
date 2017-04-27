@@ -28,6 +28,10 @@ Partial Class frmSettings
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.rdoAscending = New System.Windows.Forms.RadioButton()
         Me.rdoDescending = New System.Windows.Forms.RadioButton()
+        Me.grbType = New System.Windows.Forms.GroupBox()
+        Me.grbSortBy = New System.Windows.Forms.GroupBox()
+        Me.grbType.SuspendLayout()
+        Me.grbSortBy.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnApply
@@ -51,7 +55,7 @@ Partial Class frmSettings
         'rdoLinearOptimization
         '
         Me.rdoLinearOptimization.AutoSize = True
-        Me.rdoLinearOptimization.Location = New System.Drawing.Point(12, 33)
+        Me.rdoLinearOptimization.Location = New System.Drawing.Point(6, 48)
         Me.rdoLinearOptimization.Name = "rdoLinearOptimization"
         Me.rdoLinearOptimization.Size = New System.Drawing.Size(151, 21)
         Me.rdoLinearOptimization.TabIndex = 2
@@ -62,7 +66,7 @@ Partial Class frmSettings
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(12, 60)
+        Me.RadioButton2.Location = New System.Drawing.Point(6, 21)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(133, 21)
         Me.RadioButton2.TabIndex = 3
@@ -73,7 +77,7 @@ Partial Class frmSettings
         'rdoAscending
         '
         Me.rdoAscending.AutoSize = True
-        Me.rdoAscending.Location = New System.Drawing.Point(221, 33)
+        Me.rdoAscending.Location = New System.Drawing.Point(6, 21)
         Me.rdoAscending.Name = "rdoAscending"
         Me.rdoAscending.Size = New System.Drawing.Size(95, 21)
         Me.rdoAscending.TabIndex = 4
@@ -84,7 +88,7 @@ Partial Class frmSettings
         'rdoDescending
         '
         Me.rdoDescending.AutoSize = True
-        Me.rdoDescending.Location = New System.Drawing.Point(221, 60)
+        Me.rdoDescending.Location = New System.Drawing.Point(6, 48)
         Me.rdoDescending.Name = "rdoDescending"
         Me.rdoDescending.Size = New System.Drawing.Size(104, 21)
         Me.rdoDescending.TabIndex = 5
@@ -92,21 +96,44 @@ Partial Class frmSettings
         Me.rdoDescending.Text = "Descending"
         Me.rdoDescending.UseVisualStyleBackColor = True
         '
+        'grbType
+        '
+        Me.grbType.Controls.Add(Me.RadioButton2)
+        Me.grbType.Controls.Add(Me.rdoLinearOptimization)
+        Me.grbType.Location = New System.Drawing.Point(12, 12)
+        Me.grbType.Name = "grbType"
+        Me.grbType.Size = New System.Drawing.Size(166, 91)
+        Me.grbType.TabIndex = 6
+        Me.grbType.TabStop = False
+        Me.grbType.Text = "Optimization Type"
+        '
+        'grbSortBy
+        '
+        Me.grbSortBy.Controls.Add(Me.rdoDescending)
+        Me.grbSortBy.Controls.Add(Me.rdoAscending)
+        Me.grbSortBy.Location = New System.Drawing.Point(221, 12)
+        Me.grbSortBy.Name = "grbSortBy"
+        Me.grbSortBy.Size = New System.Drawing.Size(166, 91)
+        Me.grbSortBy.TabIndex = 7
+        Me.grbSortBy.TabStop = False
+        Me.grbSortBy.Text = "Sort By"
+        '
         'frmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(399, 321)
-        Me.Controls.Add(Me.rdoDescending)
-        Me.Controls.Add(Me.rdoAscending)
-        Me.Controls.Add(Me.RadioButton2)
-        Me.Controls.Add(Me.rdoLinearOptimization)
+        Me.Controls.Add(Me.grbSortBy)
+        Me.Controls.Add(Me.grbType)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnApply)
         Me.Name = "frmSettings"
         Me.Text = "Settings"
+        Me.grbType.ResumeLayout(False)
+        Me.grbType.PerformLayout()
+        Me.grbSortBy.ResumeLayout(False)
+        Me.grbSortBy.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -116,4 +143,6 @@ Partial Class frmSettings
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents rdoAscending As RadioButton
     Friend WithEvents rdoDescending As RadioButton
+    Friend WithEvents grbType As GroupBox
+    Friend WithEvents grbSortBy As GroupBox
 End Class
