@@ -71,7 +71,7 @@ Public Class Database
     End Function
 
     Public Function GetNodeID(name As String) As Integer
-        Dim r() As DataRow = myDataSet.Tables("Cities").Select("Name = '" & name & "'")
+        Dim r() As DataRow = myDataSet.Tables("Cities").Select("City = '" & name & "'")
         If r.Length > 0 Then
             Return r(0)("ID")
         Else
@@ -82,7 +82,7 @@ Public Class Database
     Public Function GetDistance(name1 As String, name2 As String) As Decimal
         Dim i1 As Integer = GetNodeID(name1)
         Dim i2 As Integer = GetNodeID(name2)
-        Dim r() As DataRow = myDataSet.Tables("Arcs").Select("Tail = " & i1 & " AND Head = " & i2)
+        Dim r() As DataRow = myDataSet.Tables("Arcs").Select("Tail City = " & i1 & " AND Head City = " & i2)
         If r.Length > 0 Then
             Return r(0)("Distance")
         Else
@@ -93,7 +93,7 @@ Public Class Database
     Public Sub ModifyArc(name1 As String, name2 As String, dist As Decimal)
         Dim i1 As Integer = GetNodeID(name1)
         Dim i2 As Integer = GetNodeID(name2)
-        Dim r() As DataRow = myDataSet.Tables("Arcs").Select("Tail = " & i1 & " AND Head = " & i2)
+        Dim r() As DataRow = myDataSet.Tables("Arcs").Select("Tail City = " & i1 & " AND Head City = " & i2)
         r(0).BeginEdit()
         r(0)("Distance") = dist
         r(0).EndEdit()
