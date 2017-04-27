@@ -57,8 +57,8 @@
 
         ' creating all arcs in Network
         For Each a As Arc In Net.ArcList.Values
-            e.Graphics.DrawLine(arcpen, xscale * a.Tail.Xcoord, yscale * a.Tail.Ycoord,
-                xscale * a.Head.Xcoord, yscale * a.Head.Ycoord)
+            e.Graphics.DrawLine(arcpen, xscale * a.TailNode.Xcoord, yscale * a.TailNode.Ycoord,
+                xscale * a.HeadNode.Xcoord, yscale * a.HeadNode.Ycoord)
         Next
 
         ' setting properties of pen to draw flow arcs
@@ -67,8 +67,8 @@
 
         ' creating flow arcs from the flows list
         For Each a In Path
-            e.Graphics.DrawLine(flowpen, xscale * a.Tail.Xcoord, yscale * a.Tail.Ycoord,
-            xscale * a.Head.Xcoord, yscale * a.Head.Ycoord)
+            e.Graphics.DrawLine(flowpen, xscale * a.TailNode.Xcoord, yscale * a.TailNode.Ycoord,
+            xscale * a.HeadNode.Xcoord, yscale * a.HeadNode.Ycoord)
         Next
 
         ' IMPORTANT NODE: Nodes should be created after ALL arcs are created.

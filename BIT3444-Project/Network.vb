@@ -1,12 +1,15 @@
 ﻿Public Class Network
 
-    Public Property NodeList As New SortedList(Of String, Node)
+    Public Property NodeList As SortedList(Of String, Node)
     Public Property ArcList As New SortedList(Of String, Arc)
+    Private database As Database
 
     Public Event Changed(net As Network)
 
     Public Sub New()
-
+        database = New Database
+        NodeList = database.GetNodes()
+        'ArcList = database.GetArcs()
     End Sub
 
     Public ReadOnly Property NodeCount As Integer
@@ -28,6 +31,7 @@
             End If
             Dim node As New Node(id)
             NodeList.Add(id, node)
+            'add node X & Y coords
             RaiseEvent Changed(Me)
             Return True
         Catch ex As Exception
