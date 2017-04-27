@@ -19,7 +19,7 @@
 
     ' Causes close button to stop the program
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Me.Close()
+        frmContainer.Close()
     End Sub
 
     ' Causes solve button to solve an optimization for routes based on orders
