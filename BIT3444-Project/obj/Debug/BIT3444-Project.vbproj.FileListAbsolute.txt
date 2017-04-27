@@ -22,7 +22,6 @@ C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp 
 C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\bin\Debug\Microsoft.Solver.Foundation.dll
 C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444-Project.vbprojResolveAssemblyReference.cache
 C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmSettings.resources
-C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmOutput.resources
 C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444_Project.Resources.resources
 C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444-Project.vbproj.GenerateResource.Cache
 C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\bin\Debug\BIT3444-Project.exe.config
@@ -41,17 +40,15 @@ C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repos
 C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\obj\Debug\BIT3444-Project.vbproj.GenerateResource.Cache
 C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\obj\Debug\BIT3444_Project.frmContainer.resources
 C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\obj\Debug\BIT3444_Project.frmMap.resources
-<<<<<<< HEAD
 C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmAddOrder.resources
 C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmWelcome.resources
 C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmContainer.resources
 C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmMap.resources
-=======
 C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.vbprojResolveAssemblyReference.cache
 C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmAddOrder.resources
 C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmWelcome.resources
 C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmContainer.resources
 C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmMap.resources
->>>>>>> d7f240c4cab277af99c9410e04df299274666645
 C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\obj\Debug\BIT3444_Project.frmWelcome.resources
 C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\obj\Debug\BIT3444_Project.frmOrderQueue.resources
+C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmOrderQueue.resources
