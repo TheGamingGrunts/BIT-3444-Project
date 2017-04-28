@@ -4,6 +4,7 @@ Public Class Database
     Private myDataSet As New DataSet
     Private nodesDA As OleDbDataAdapter
     Private arcsDA As OleDbDataAdapter
+    Private ordersDA As OleDbDataAdapter
 
     Public Sub New()
         nodesDA = GetDataAdapter("SELECT * FROM Cities")
@@ -11,6 +12,9 @@ Public Class Database
 
         arcsDA = GetDataAdapter("SELECT * FROM Arcs")
         arcsDA.Fill(myDataSet, "Arcs")
+
+        ordersDA = GetDataAdapter("SELECT * FROM Orders")
+        ordersDA.Fill(myDataSet, "Orders")
     End Sub
 
     'Returns the data adapter for accessing the database
@@ -38,11 +42,11 @@ Public Class Database
     Public Function GetArcs(nodeList As SortedList(Of String, Node)) As SortedList(Of String, Arc)
         Dim arcSList As New SortedList(Of String, Arc)
         For i As Integer = 0 To (myDataSet.Tables("Arcs").Rows.Count - 1)
-            Dim headNode As Node = nodeList(myDataSet.Tables("Arcs").Rows(i)("Head City"))
-            Dim tailNode As Node = nodeList(myDataSet.Tables("Arcs").Rows(i)("Tail City"))
+            Dim headNode As Node = nodeList(myDataSet.Tables("Arcs").Rows(i)("Head"))
+            Dim tailNode As Node = nodeList(myDataSet.Tables("Arcs").Rows(i)("Tail"))
             Dim distance As Double = myDataSet.Tables("Arcs").Rows(i)("Distance")
             Dim cost As Double = myDataSet.Tables("Arcs").Rows(i)("Cost")
-            'Dim capacity As Integer = myDataSet.Tables("Arcs").Rows(i)("Capacity")
+            Dim capacity As Integer = myDataSet.Tables("Arcs").Rows(i)("Capacity")
             Dim newArc As New Arc(tailNode, headNode, distance, cost)
 
             tailNode.ArcsOut.Add(newArc)
@@ -51,6 +55,20 @@ Public Class Database
         Next
 
         Return arcSList
+    End Function
+
+    Public Function GetOrders(nodeList As SortedList(Of String, Node)) As SortedList(Of String, Order)
+        Dim orderList As New SortedList(Of String, Order)
+        For i As Integer = 0 To (myDataSet.Tables("Orders").Rows.Count - 1)
+            Dim id As String = myDataSet.Tables("Orders").Rows(i)("ID")
+            Dim origin As String = myDataSet.Tables("Orders").Rows(i)("From")
+            Dim destination As String = myDataSet.Tables("Orders").Rows(i)("Destination")
+            Dim newOrder As New Order(id, origin, destination)
+
+            orderList.Add(newOrder.ID, newOrder)
+        Next
+
+        Return orderList
     End Function
 
     Public Function GetNumNodes() As Integer
@@ -82,7 +100,7 @@ Public Class Database
     Public Function GetDistance(name1 As String, name2 As String) As Decimal
         Dim i1 As Integer = GetNodeID(name1)
         Dim i2 As Integer = GetNodeID(name2)
-        Dim r() As DataRow = myDataSet.Tables("Arcs").Select("Tail City = " & i1 & " AND Head City = " & i2)
+        Dim r() As DataRow = myDataSet.Tables("Arcs").Select("Tail = '" & i1 & "' AND Head = '" & i2 & "'")
         If r.Length > 0 Then
             Return r(0)("Distance")
         Else
@@ -93,7 +111,7 @@ Public Class Database
     Public Sub ModifyArc(name1 As String, name2 As String, dist As Decimal)
         Dim i1 As Integer = GetNodeID(name1)
         Dim i2 As Integer = GetNodeID(name2)
-        Dim r() As DataRow = myDataSet.Tables("Arcs").Select("Tail City = " & i1 & " AND Head City = " & i2)
+        Dim r() As DataRow = myDataSet.Tables("Arcs").Select("Tail = " & i1 & " AND Head = " & i2)
         r(0).BeginEdit()
         r(0)("Distance") = dist
         r(0).EndEdit()
