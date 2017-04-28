@@ -38,6 +38,16 @@ Public Class Database
         Return nodeSList
     End Function
 
+    Public Function GetOrders() As List(Of Order)
+        Dim orders As New List(Of Order)
+        For i As Integer = 0 To (myDataSet.Tables("Orders").Rows.Count - 1)
+            orders.Add(New Order(myDataSet.Tables("Orders").Rows(i)("From"),
+                                 myDataSet.Tables("Orders").Rows(i)("Destination"),
+                                 New List(Of TArc)))
+        Next
+        Return orders
+    End Function
+
     'Returns a list of all arcs on the map
     Public Function GetArcs(nodeList As SortedList(Of String, Node)) As SortedList(Of String, Arc)
         Dim arcSList As New SortedList(Of String, Arc)
