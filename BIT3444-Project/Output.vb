@@ -15,6 +15,7 @@
         myDatabase = New Database
         nodeSortedList = myDatabase.GetNodes()
         arcSortedList = myDatabase.GetArcs(nodeSortedList)
+        orderList = myDatabase.GetOrders()
     End Sub
 
     ' Causes close button to stop the program
@@ -111,7 +112,7 @@
                     Dim length As Decimal
                     Dim list As List(Of TArc) = myNet.ShortestPath(c1, c2, length)
                     If list IsNot Nothing Then
-                        newOrderList.Add(New Order(c1, c2, list, length))
+                        newOrderList.Add(New Order(c1, c2, list))
                         Dim destTNode As New TreeNode(c2)
                         origTNode.Nodes.Add(destTNode)
                     End If
@@ -132,15 +133,15 @@
         myNet.NodeList.Clear()
         myNet.ArcList.Clear()
 
-        MessageBox.Show(myDatabase.GetNumNodes)
+        'MessageBox.Show(myDatabase.GetNumNodes)
 
         For i As Integer = 1 To myDatabase.GetNumNodes
 
-            MessageBox.Show("before " & i)
+            'MessageBox.Show("before " & i)
 
             myNet += myDatabase.GetNodeName(i)
 
-            MessageBox.Show("after " & i)
+            'MessageBox.Show("after " & i)
 
         Next
         For Each c1 In myNet.NodeList.Keys
@@ -162,11 +163,11 @@
     'Sorts the waiting list in ascending or descending order based on length
     Private Sub SortWaitingList()
     Dim newWaiting As List(Of Order)
-    If settingsForm.rdoAscending.Checked Then
-        newWaiting = From orders In waiting
-                     Order By orders.length Ascending, orders.Origin
-    Else
-        newWaiting = From orders In waiting
+        If solveOption Then
+            newWaiting = From orders In waiting
+                         Order By orders.length Ascending, orders.Origin
+        Else
+            newWaiting = From orders In waiting
                      Order By orders.length Descending, orders.Origin
     End If
     waiting = newWaiting

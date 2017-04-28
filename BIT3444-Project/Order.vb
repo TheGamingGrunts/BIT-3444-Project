@@ -8,10 +8,9 @@
 
     End Sub
 
-    Public Sub New(orig As String, dest As String, p As List(Of TArc), len As Double)
+    Public Sub New(orig As String, dest As String, p As List(Of TArc))
         Origin = orig
         Destination = dest
         Path = p
-        length = len
     End Sub
 End Class
