@@ -39,6 +39,9 @@ Partial Class frmOrderQueue
         Me.LinearOptimizationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AscendingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DescendingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.txtTotalCost = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblCost = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -104,7 +107,7 @@ Partial Class frmOrderQueue
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(310, 475)
+        Me.btnClose.Location = New System.Drawing.Point(310, 518)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(102, 44)
         Me.btnClose.TabIndex = 13
@@ -190,12 +193,39 @@ Partial Class frmOrderQueue
         Me.DescendingToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.DescendingToolStripMenuItem.Text = "Descending"
         '
+        'txtTotalCost
+        '
+        Me.txtTotalCost.Location = New System.Drawing.Point(86, 540)
+        Me.txtTotalCost.Name = "txtTotalCost"
+        Me.txtTotalCost.Size = New System.Drawing.Size(104, 22)
+        Me.txtTotalCost.TabIndex = 17
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(29, 559)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(0, 17)
+        Me.Label1.TabIndex = 18
+        '
+        'lblCost
+        '
+        Me.lblCost.AutoSize = True
+        Me.lblCost.Location = New System.Drawing.Point(10, 542)
+        Me.lblCost.Name = "lblCost"
+        Me.lblCost.Size = New System.Drawing.Size(76, 17)
+        Me.lblCost.TabIndex = 19
+        Me.lblCost.Text = "Total Cost:"
+        '
         'frmOrderQueue
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(432, 528)
+        Me.ClientSize = New System.Drawing.Size(432, 585)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblCost)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txtTotalCost)
         Me.Controls.Add(Me.btnSettings)
         Me.Controls.Add(Me.btnRemoveOrder)
         Me.Controls.Add(Me.btnClose)
@@ -233,4 +263,7 @@ Partial Class frmOrderQueue
     Friend WithEvents LinearOptimizationToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AscendingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DescendingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents txtTotalCost As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblCost As Label
 End Class
