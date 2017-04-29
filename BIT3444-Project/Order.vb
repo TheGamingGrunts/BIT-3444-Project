@@ -13,18 +13,16 @@
         delivered = False
     End Sub
 
-<<<<<<< HEAD
     Public Sub New(idNum As String, orig As String, dest As String, p As List(Of TArc), len As Double)
         Origin = orig
         Destination = dest
         Path = p
         Length = len
-=======
+    End Sub
     Public Sub New(orig As String, dest As String, p As List(Of TArc))
         Origin = orig
         Destination = dest
         Path = p
->>>>>>> origin/master
     End Sub
 
     Public Overrides Function ToString() As String

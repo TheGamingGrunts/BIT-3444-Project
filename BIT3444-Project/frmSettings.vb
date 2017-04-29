@@ -10,16 +10,15 @@
         Else
             frmOrderQueue.solveOption = False
         End If
-<<<<<<< HEAD
 
         If rdoAscending.Checked = True Then
             frmOrderQueue.IsAscending = True
         Else
             frmOrderQueue.IsAscending = False
         End If
-=======
+
         Me.Close()
->>>>>>> origin/master
+
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click

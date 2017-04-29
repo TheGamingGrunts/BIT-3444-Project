@@ -29,7 +29,7 @@ Partial Class frmOrderQueue
         Me.lstDelivered = New System.Windows.Forms.ListBox()
         Me.btnSolve = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
-        Me.btnRushOrder = New System.Windows.Forms.Button()
+        Me.btnRemoveOrder = New System.Windows.Forms.Button()
         Me.btnSettings = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -102,15 +102,15 @@ Partial Class frmOrderQueue
         Me.btnClose.Text = "Cancel"
         Me.btnClose.UseVisualStyleBackColor = True
         '
-        'btnRushOrder
+        'btnRemoveOrder
         '
-        Me.btnRushOrder.Location = New System.Drawing.Point(13, 318)
-        Me.btnRushOrder.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnRushOrder.Name = "btnRushOrder"
-        Me.btnRushOrder.Size = New System.Drawing.Size(177, 44)
-        Me.btnRushOrder.TabIndex = 14
-        Me.btnRushOrder.Text = "Rush Order"
-        Me.btnRushOrder.UseVisualStyleBackColor = True
+        Me.btnRemoveOrder.Location = New System.Drawing.Point(13, 318)
+        Me.btnRemoveOrder.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnRemoveOrder.Name = "btnRemoveOrder"
+        Me.btnRemoveOrder.Size = New System.Drawing.Size(177, 44)
+        Me.btnRemoveOrder.TabIndex = 14
+        Me.btnRemoveOrder.Text = "Remove Order"
+        Me.btnRemoveOrder.UseVisualStyleBackColor = True
         '
         'btnSettings
         '
@@ -129,7 +129,7 @@ Partial Class frmOrderQueue
         Me.ClientSize = New System.Drawing.Size(432, 480)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnSettings)
-        Me.Controls.Add(Me.btnRushOrder)
+        Me.Controls.Add(Me.btnRemoveOrder)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnSolve)
         Me.Controls.Add(Me.lstDelivered)
@@ -151,6 +151,6 @@ Partial Class frmOrderQueue
     Friend WithEvents lstDelivered As ListBox
     Friend WithEvents btnSolve As Button
     Friend WithEvents btnClose As Button
-    Friend WithEvents btnRushOrder As Button
+    Friend WithEvents btnRemoveOrder As Button
     Friend WithEvents btnSettings As Button
 End Class
