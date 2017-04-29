@@ -97,8 +97,8 @@
                     Next
                 End If
                 Return list
-                Else
-                    length = inf
+            Else
+                length = inf
                 Return Nothing
             End If
         Next
@@ -320,6 +320,25 @@
                 numWaiting = waiting.Count
             End If
         Loop
+    End Sub
+
+    Private Sub lstDelivered_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstDelivered.SelectedIndexChanged
+        Dim order As Order = Nothing
+        For Each o In delivered
+            If o.ID = Strings.Replace(lstDelivered.SelectedItem, "Order #", "") Then
+                order = o
+                MessageBox.Show("Success")
+                Exit For
+            End If
+        Next
+        Dim str As String = ""
+        For Each path In order.Path
+            str &= "Path: " & path.HeadNode.ID & ":" & path.TailNode.ID & vbCrLf
+            For Each arc In path.PathList
+                str &= arc.ToString
+            Next
+        Next
+        MessageBox.Show(str)
     End Sub
 
     Private Sub OrderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrderToolStripMenuItem.Click
