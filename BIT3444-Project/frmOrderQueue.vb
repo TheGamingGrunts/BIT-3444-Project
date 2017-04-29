@@ -322,7 +322,6 @@
         Loop
     End Sub
 
-<<<<<<< HEAD
     Private Sub lstDelivered_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstDelivered.SelectedIndexChanged
         Dim order As Order = Nothing
         For Each o In delivered
@@ -340,9 +339,9 @@
             Next
         Next
         MessageBox.Show(str)
-=======
+    End Sub
+
     Private Sub OrderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrderToolStripMenuItem.Click
 
->>>>>>> c919830224e3d81252212a4d0f777c1564988383
     End Sub
 End Class
