@@ -321,4 +321,8 @@
             End If
         Loop
     End Sub
+
+    Private Sub OrderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrderToolStripMenuItem.Click
+
+    End Sub
 End Class
