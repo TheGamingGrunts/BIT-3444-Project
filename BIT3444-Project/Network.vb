@@ -26,9 +26,6 @@
 
     Public Function AddNode(id As String) As Boolean
         Try
-
-            MessageBox.Show(id)
-
             If NodeList.ContainsKey(id) Then
                 Throw New Exception("Node " & id & " already exists.")
             End If
@@ -109,17 +106,17 @@
 
 
         ' initialization
-        For Each a In ArcList.Values
-            a.Capacity = 0 'a.Flow
-        Next
+        'For Each a In ArcList.Values
+        'a.Capacity = 0
+        'Next
         For Each n In NodeList.Values
             tempList.Add(n.ID)
             labelList.Add(n.ID, inf)
             trackList.Add(n.ID, Nothing)
         Next
 
-        Try
-            If Not NodeList.ContainsKey(orig) Or Not NodeList.ContainsKey(dest) Then
+        'Try
+        If Not NodeList.ContainsKey(orig) Or Not NodeList.ContainsKey(dest) Then
                 Throw New Exception("Error in origin or destination")
             End If
             If orig = dest Then
@@ -159,10 +156,10 @@
 
             Loop
 
-            ' backtrack shortest path
-            Dim path As New List(Of TArc)
-            Dim a As TArc = trackList(dest)
-            a.Capacity = 1 'a.flow
+        ' backtrack shortest path
+        Dim path As New List(Of TArc)
+        Dim a As TArc = trackList(dest).toTArc()
+        a.Capacity = 1
             Do
                 path.Insert(0, a)
                 If a.TailNode.ID <> orig And a.HeadNode.ID <> dest Then
@@ -171,17 +168,17 @@
                     origdest(1) = dest
                     a.PathList.Add(origdest)
                 End If
-                a = trackList(a.TailNode.ID)
-                If a IsNot Nothing Then
-                    a.Capacity = 1 'a.Flow
+            a = trackList(a.TailNode.ID).toTArc()
+            If a IsNot Nothing Then
+                    a.Capacity = 1
                 End If
             Loop Until a Is Nothing
             length = labelList(dest)
             Return path
-        Catch ex As Exception
-            'MessageBox.Show(ex.Message, "Error")
-            Return Nothing
-        End Try
+        'Catch ex As Exception
+        'MessageBox.Show(ex.Message, "Error")
+        Return Nothing
+        'End Try
     End Function
 
 End Class

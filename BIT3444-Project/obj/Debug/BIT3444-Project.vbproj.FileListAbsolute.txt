@@ -5,7 +5,6 @@ C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.pd
 C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.xml
 C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\bin\Debug\Microsoft.Solver.Foundation.dll
 C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmSettings.resources
-C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmOutput.resources
 C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.Resources.resources
 C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.vbproj.GenerateResource.Cache
 C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.exe
@@ -51,3 +50,22 @@ C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.fr
 C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\obj\Debug\BIT3444_Project.frmWelcome.resources
 C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\obj\Debug\BIT3444_Project.frmOrderQueue.resources
 C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmOrderQueue.resources
+C:\BIT3444\Project\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmOrderQueue.resources
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.exe.config
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.exe
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.xml
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.pdb
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\bin\Debug\Database.accdb
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.exe
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.pdb
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\bin\Debug\BIT3444-Project.xml
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\bin\Debug\Microsoft.Solver.Foundation.dll
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.vbprojResolveAssemblyReference.cache
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmAddOrder.resources
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmWelcome.resources
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmContainer.resources
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmMap.resources
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmSettings.resources
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmOrderQueue.resources
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.Resources.resources
+C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.vbproj.GenerateResource.Cache

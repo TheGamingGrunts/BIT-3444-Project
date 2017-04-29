@@ -33,4 +33,14 @@
         Dim str As String = TailNode.ToString & "-TO-" & HeadNode.ToString
         Return str
     End Function
+
+    Public Function toTArc() As TArc
+        Dim newTArc As New TArc(TailNode, HeadNode)
+        newTArc.ID = ID
+        newTArc.Distance = Distance
+        newTArc.Cost = Cost
+        newTArc.Capacity = Capacity
+
+        Return newTArc
+    End Function
 End Class

@@ -115,11 +115,11 @@
     <Compile Include="Network.vb" />
     <Compile Include="Optimization.vb" />
     <Compile Include="Order.vb" />
-    <Compile Include="Output.vb">
+    <Compile Include="frmOrderQueue.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Output.Designer.vb">
-      <DependentUpon>Output.vb</DependentUpon>
+    <Compile Include="frmOrderQueue.Designer.vb">
+      <DependentUpon>frmOrderQueue.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -156,8 +156,8 @@
     <EmbeddedResource Include="frmSettings.resx">
       <DependentUpon>frmSettings.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Output.resx">
-      <DependentUpon>Output.vb</DependentUpon>
+    <EmbeddedResource Include="frmOrderQueue.resx">
+      <DependentUpon>frmOrderQueue.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
