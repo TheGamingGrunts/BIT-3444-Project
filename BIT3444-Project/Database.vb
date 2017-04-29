@@ -17,7 +17,7 @@ Public Class Database
         ordersDA = GetDataAdapter("SELECT * FROM Orders")
         ordersDA.Fill(myDataSet, "Orders")
 
-        usersDA = GetDataAdapter("SELECT * FROM users")
+        usersDA = GetDataAdapter("SELECT * FROM Users")
         usersDA.Fill(myDataSet, "Users")
     End Sub
 
@@ -40,10 +40,6 @@ Public Class Database
         Next
 
         Return nodeSList
-    End Function
-
-    Public Function CheckUser(username As String, password As String)
-
     End Function
 
     Public Function GetOrders() As List(Of Order)
@@ -87,6 +83,18 @@ Public Class Database
         Next
 
         Return orderList
+    End Function
+
+    Public Function getUsers() As SortedList(Of String, String)
+        Dim userList As New SortedList(Of String, String)
+        For i As Integer = 0 To (myDataSet.Tables("Users").Rows.Count - 1)
+            Dim username As String = myDataSet.Tables("Users").Rows(i)("Username")
+            Dim password As String = myDataSet.Tables("Users").Rows(i)("Password")
+
+            userList.Add(username, password)
+        Next
+
+        Return userList
     End Function
 
     Public Function GetNumNodes() As Integer
