@@ -5,6 +5,7 @@ Public Class Database
     Private nodesDA As OleDbDataAdapter
     Private arcsDA As OleDbDataAdapter
     Private ordersDA As OleDbDataAdapter
+    Private usersDA As OleDbDataAdapter
 
     Public Sub New()
         nodesDA = GetDataAdapter("SELECT * FROM Cities")
@@ -15,6 +16,9 @@ Public Class Database
 
         ordersDA = GetDataAdapter("SELECT * FROM Orders")
         ordersDA.Fill(myDataSet, "Orders")
+
+        usersDA = GetDataAdapter("SELECT * FROM users")
+        usersDA.Fill(myDataSet, "Users")
     End Sub
 
     'Returns the data adapter for accessing the database
@@ -36,6 +40,10 @@ Public Class Database
         Next
 
         Return nodeSList
+    End Function
+
+    Public Function CheckUser(username As String, password As String)
+
     End Function
 
     Public Function GetOrders() As List(Of Order)

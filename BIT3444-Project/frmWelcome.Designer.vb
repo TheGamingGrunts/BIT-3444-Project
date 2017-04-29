@@ -32,72 +32,70 @@ Partial Class frmWelcome
         '
         'txtUsername
         '
-        Me.txtUsername.Location = New System.Drawing.Point(112, 45)
-        Me.txtUsername.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtUsername.Location = New System.Drawing.Point(149, 55)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(171, 20)
+        Me.txtUsername.Size = New System.Drawing.Size(227, 22)
         Me.txtUsername.TabIndex = 0
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(112, 98)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPassword.Location = New System.Drawing.Point(149, 121)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(171, 20)
+        Me.txtPassword.Size = New System.Drawing.Size(227, 22)
         Me.txtPassword.TabIndex = 1
         '
         'lblUsername
         '
         Me.lblUsername.AutoSize = True
-        Me.lblUsername.Location = New System.Drawing.Point(42, 47)
-        Me.lblUsername.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblUsername.Location = New System.Drawing.Point(56, 58)
         Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(58, 13)
+        Me.lblUsername.Size = New System.Drawing.Size(77, 17)
         Me.lblUsername.TabIndex = 2
         Me.lblUsername.Text = "Username:"
         '
         'lblPassword
         '
         Me.lblPassword.AutoSize = True
-        Me.lblPassword.Location = New System.Drawing.Point(42, 100)
-        Me.lblPassword.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblPassword.Location = New System.Drawing.Point(56, 123)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(56, 13)
+        Me.lblPassword.Size = New System.Drawing.Size(73, 17)
         Me.lblPassword.TabIndex = 3
         Me.lblPassword.Text = "Password:"
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(44, 158)
-        Me.btnLogin.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLogin.Location = New System.Drawing.Point(59, 194)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(76, 37)
+        Me.btnLogin.Size = New System.Drawing.Size(101, 46)
         Me.btnLogin.TabIndex = 4
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(206, 158)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCancel.Location = New System.Drawing.Point(275, 194)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(76, 37)
+        Me.btnCancel.Size = New System.Drawing.Size(101, 46)
         Me.btnCancel.TabIndex = 5
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
         'frmWelcome
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(339, 252)
+        Me.ClientSize = New System.Drawing.Size(452, 310)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.lblPassword)
         Me.Controls.Add(Me.lblUsername)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtUsername)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "frmWelcome"
         Me.Text = "Login"
         Me.ResumeLayout(False)
