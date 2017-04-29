@@ -22,7 +22,7 @@
 
         For Each o In orderList.Values
             waiting.Add(o)
-            'lstWaiting.Items.Add(o.ToString)
+            lstWaiting.Items.Add(o.ToString)
         Next
     End Sub
 
@@ -135,21 +135,23 @@
         If IsAscending Then
             sortedWait = From o In orderList.Values
                          Where o.Delivered = False
-                         Order By o.Length Ascending
+                         Order By o.Length Ascending, o.ID Ascending
 
             sortedDeiliver = From o In orderList.Values
                              Where o.Delivered = True
-                             Order By o.Length Ascending
+                             Order By o.Length Ascending, o.ID Ascending
         Else
             sortedWait = From o In orderList.Values
                          Where o.Delivered = False
-                         Order By o.Length Descending
+                         Order By o.Length Descending, o.ID Ascending
 
             sortedDeiliver = From o In orderList.Values
                              Where o.Delivered = True
-                             Order By o.Length Descending
+                             Order By o.Length Descending, o.ID Ascending
         End If
 
+        waiting.Clear()
+        delivered.Clear()
         For Each o In sortedWait
             waiting.Add(o)
         Next
@@ -159,6 +161,7 @@
         Next
 
         lstWaiting.Items.Clear()
+        lstDelivered.Items.Clear()
         For Each o In waiting
             lstWaiting.Items.Add(o.ToString)
         Next
