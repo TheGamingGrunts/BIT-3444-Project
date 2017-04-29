@@ -85,7 +85,8 @@
             If opt.IsOptimal() Then
                 Dim list As New List(Of TArc)
                 Dim node As Node = nodeSortedList(orig)
-                Do While n.ID <> dest
+                If n.ID <> dest Then
+
                     For Each a In n.ArcsOut
                         If opt.GetVarValue(a.ID) > 0.1 Then
                             list.Add(a)
@@ -94,10 +95,10 @@
                             Exit For
                         End If
                     Next
-                Loop
+                End If
                 Return list
-            Else
-                length = inf
+                Else
+                    length = inf
                 Return Nothing
             End If
         Next
