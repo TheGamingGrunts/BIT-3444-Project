@@ -31,11 +31,23 @@ Partial Class frmOrderQueue
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnRemoveOrder = New System.Windows.Forms.Button()
         Me.btnSettings = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SortByToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LabelCorrectingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LinearOptimizationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AscendingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DescendingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.txtTotalCost = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblCost = New System.Windows.Forms.Label()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnAddOrder
         '
-        Me.btnAddOrder.Location = New System.Drawing.Point(13, 370)
+        Me.btnAddOrder.Location = New System.Drawing.Point(13, 423)
         Me.btnAddOrder.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAddOrder.Name = "btnAddOrder"
         Me.btnAddOrder.Size = New System.Drawing.Size(177, 44)
@@ -47,7 +59,7 @@ Partial Class frmOrderQueue
         '
         Me.lstWaiting.FormattingEnabled = True
         Me.lstWaiting.ItemHeight = 16
-        Me.lstWaiting.Location = New System.Drawing.Point(17, 31)
+        Me.lstWaiting.Location = New System.Drawing.Point(17, 84)
         Me.lstWaiting.Margin = New System.Windows.Forms.Padding(4)
         Me.lstWaiting.Name = "lstWaiting"
         Me.lstWaiting.Size = New System.Drawing.Size(173, 276)
@@ -56,7 +68,7 @@ Partial Class frmOrderQueue
         'lblWaiting
         '
         Me.lblWaiting.AutoSize = True
-        Me.lblWaiting.Location = New System.Drawing.Point(16, 11)
+        Me.lblWaiting.Location = New System.Drawing.Point(16, 64)
         Me.lblWaiting.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblWaiting.Name = "lblWaiting"
         Me.lblWaiting.Size = New System.Drawing.Size(103, 17)
@@ -66,7 +78,7 @@ Partial Class frmOrderQueue
         'lblDelivered
         '
         Me.lblDelivered.AutoSize = True
-        Me.lblDelivered.Location = New System.Drawing.Point(232, 11)
+        Me.lblDelivered.Location = New System.Drawing.Point(232, 64)
         Me.lblDelivered.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDelivered.Name = "lblDelivered"
         Me.lblDelivered.Size = New System.Drawing.Size(116, 17)
@@ -77,7 +89,7 @@ Partial Class frmOrderQueue
         '
         Me.lstDelivered.FormattingEnabled = True
         Me.lstDelivered.ItemHeight = 16
-        Me.lstDelivered.Location = New System.Drawing.Point(235, 32)
+        Me.lstDelivered.Location = New System.Drawing.Point(235, 85)
         Me.lstDelivered.Margin = New System.Windows.Forms.Padding(4)
         Me.lstDelivered.Name = "lstDelivered"
         Me.lstDelivered.Size = New System.Drawing.Size(177, 276)
@@ -85,7 +97,7 @@ Partial Class frmOrderQueue
         '
         'btnSolve
         '
-        Me.btnSolve.Location = New System.Drawing.Point(13, 422)
+        Me.btnSolve.Location = New System.Drawing.Point(13, 475)
         Me.btnSolve.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSolve.Name = "btnSolve"
         Me.btnSolve.Size = New System.Drawing.Size(177, 44)
@@ -95,7 +107,7 @@ Partial Class frmOrderQueue
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(310, 422)
+        Me.btnClose.Location = New System.Drawing.Point(310, 518)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(102, 44)
         Me.btnClose.TabIndex = 13
@@ -104,7 +116,7 @@ Partial Class frmOrderQueue
         '
         'btnRemoveOrder
         '
-        Me.btnRemoveOrder.Location = New System.Drawing.Point(13, 318)
+        Me.btnRemoveOrder.Location = New System.Drawing.Point(13, 371)
         Me.btnRemoveOrder.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRemoveOrder.Name = "btnRemoveOrder"
         Me.btnRemoveOrder.Size = New System.Drawing.Size(177, 44)
@@ -114,7 +126,7 @@ Partial Class frmOrderQueue
         '
         'btnSettings
         '
-        Me.btnSettings.Location = New System.Drawing.Point(235, 318)
+        Me.btnSettings.Location = New System.Drawing.Point(235, 371)
         Me.btnSettings.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSettings.Name = "btnSettings"
         Me.btnSettings.Size = New System.Drawing.Size(177, 44)
@@ -122,12 +134,98 @@ Partial Class frmOrderQueue
         Me.btnSettings.Text = "Settings"
         Me.btnSettings.UseVisualStyleBackColor = True
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(432, 28)
+        Me.MenuStrip1.TabIndex = 16
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'SettingsToolStripMenuItem
+        '
+        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OrderToolStripMenuItem, Me.SortByToolStripMenuItem})
+        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(74, 24)
+        Me.SettingsToolStripMenuItem.Text = "Settings"
+        '
+        'OrderToolStripMenuItem
+        '
+        Me.OrderToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LabelCorrectingToolStripMenuItem, Me.LinearOptimizationToolStripMenuItem})
+        Me.OrderToolStripMenuItem.Name = "OrderToolStripMenuItem"
+        Me.OrderToolStripMenuItem.Size = New System.Drawing.Size(206, 26)
+        Me.OrderToolStripMenuItem.Text = "Optimization Type"
+        '
+        'SortByToolStripMenuItem
+        '
+        Me.SortByToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AscendingToolStripMenuItem, Me.DescendingToolStripMenuItem})
+        Me.SortByToolStripMenuItem.Name = "SortByToolStripMenuItem"
+        Me.SortByToolStripMenuItem.Size = New System.Drawing.Size(206, 26)
+        Me.SortByToolStripMenuItem.Text = "Sort By"
+        '
+        'LabelCorrectingToolStripMenuItem
+        '
+        Me.LabelCorrectingToolStripMenuItem.Checked = True
+        Me.LabelCorrectingToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.LabelCorrectingToolStripMenuItem.Name = "LabelCorrectingToolStripMenuItem"
+        Me.LabelCorrectingToolStripMenuItem.Size = New System.Drawing.Size(215, 26)
+        Me.LabelCorrectingToolStripMenuItem.Text = "Label Correcting"
+        '
+        'LinearOptimizationToolStripMenuItem
+        '
+        Me.LinearOptimizationToolStripMenuItem.Name = "LinearOptimizationToolStripMenuItem"
+        Me.LinearOptimizationToolStripMenuItem.Size = New System.Drawing.Size(215, 26)
+        Me.LinearOptimizationToolStripMenuItem.Text = "Linear Optimization"
+        '
+        'AscendingToolStripMenuItem
+        '
+        Me.AscendingToolStripMenuItem.Checked = True
+        Me.AscendingToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.AscendingToolStripMenuItem.Name = "AscendingToolStripMenuItem"
+        Me.AscendingToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.AscendingToolStripMenuItem.Text = "Ascending"
+        '
+        'DescendingToolStripMenuItem
+        '
+        Me.DescendingToolStripMenuItem.Name = "DescendingToolStripMenuItem"
+        Me.DescendingToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.DescendingToolStripMenuItem.Text = "Descending"
+        '
+        'txtTotalCost
+        '
+        Me.txtTotalCost.Location = New System.Drawing.Point(86, 540)
+        Me.txtTotalCost.Name = "txtTotalCost"
+        Me.txtTotalCost.Size = New System.Drawing.Size(104, 22)
+        Me.txtTotalCost.TabIndex = 17
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(29, 559)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(0, 17)
+        Me.Label1.TabIndex = 18
+        '
+        'lblCost
+        '
+        Me.lblCost.AutoSize = True
+        Me.lblCost.Location = New System.Drawing.Point(10, 542)
+        Me.lblCost.Name = "lblCost"
+        Me.lblCost.Size = New System.Drawing.Size(76, 17)
+        Me.lblCost.TabIndex = 19
+        Me.lblCost.Text = "Total Cost:"
+        '
         'frmOrderQueue
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(432, 480)
+        Me.ClientSize = New System.Drawing.Size(432, 585)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblCost)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txtTotalCost)
         Me.Controls.Add(Me.btnSettings)
         Me.Controls.Add(Me.btnRemoveOrder)
         Me.Controls.Add(Me.btnClose)
@@ -137,9 +235,13 @@ Partial Class frmOrderQueue
         Me.Controls.Add(Me.lblWaiting)
         Me.Controls.Add(Me.lstWaiting)
         Me.Controls.Add(Me.btnAddOrder)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmOrderQueue"
         Me.Text = "Order Queue"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -153,4 +255,15 @@ Partial Class frmOrderQueue
     Friend WithEvents btnClose As Button
     Friend WithEvents btnRemoveOrder As Button
     Friend WithEvents btnSettings As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OrderToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SortByToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LabelCorrectingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LinearOptimizationToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AscendingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DescendingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents txtTotalCost As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblCost As Label
 End Class
