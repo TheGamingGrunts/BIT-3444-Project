@@ -44,7 +44,7 @@
     End Sub
 
     ' Opens a form that allows the user to add an order
-    Private Sub btnAddOrder_Click(sender As Object, e As EventArgs) Handles btnAddOrder.Click
+    Private Sub btnAddOrder_Click(sender As Object, e As EventArgs) 
 
     End Sub
 
@@ -188,7 +188,7 @@
         frmContainer.Refresh()
     End Sub
 
-    Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
+    Private Sub btnSettings_Click(sender As Object, e As EventArgs)
         settingsForm.Show()
     End Sub
 
@@ -358,7 +358,6 @@
         MessageBox.Show(str)
     End Sub
 
-<<<<<<< HEAD
     Private Sub AscendingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AscendingToolStripMenuItem.Click
         IsAscending = True
         SortWaitingList()
@@ -379,9 +378,5 @@
         solveOption = False
         SendOrdersSolver()
         SortWaitingList()
-=======
-    Private Sub OrderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrderToolStripMenuItem.Click
-
->>>>>>> origin/master
     End Sub
 End Class

@@ -36,6 +36,6 @@
             totalCost += p.Cost
         Next
 
-        Return totalCost
+        Return Math.Round(totalCost, 2)
     End Function
 End Class
