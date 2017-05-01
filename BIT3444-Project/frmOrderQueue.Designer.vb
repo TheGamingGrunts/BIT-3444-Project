@@ -40,6 +40,8 @@ Partial Class frmOrderQueue
         Me.txtTotalCost = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblCost = New System.Windows.Forms.Label()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContactInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -116,7 +118,7 @@ Partial Class frmOrderQueue
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem, Me.ToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
@@ -171,7 +173,7 @@ Partial Class frmOrderQueue
         '
         'txtTotalCost
         '
-        Me.txtTotalCost.Location = New System.Drawing.Point(86, 471)
+        Me.txtTotalCost.Location = New System.Drawing.Point(86, 473)
         Me.txtTotalCost.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtTotalCost.Name = "txtTotalCost"
         Me.txtTotalCost.ReadOnly = True
@@ -194,6 +196,19 @@ Partial Class frmOrderQueue
         Me.lblCost.Size = New System.Drawing.Size(76, 17)
         Me.lblCost.TabIndex = 19
         Me.lblCost.Text = "Total Cost:"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContactInfoToolStripMenuItem})
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(62, 24)
+        Me.ToolStripMenuItem1.Text = "About"
+        '
+        'ContactInfoToolStripMenuItem
+        '
+        Me.ContactInfoToolStripMenuItem.Name = "ContactInfoToolStripMenuItem"
+        Me.ContactInfoToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ContactInfoToolStripMenuItem.Text = "Contact Info"
         '
         'frmOrderQueue
         '
@@ -240,4 +255,6 @@ Partial Class frmOrderQueue
     Friend WithEvents txtTotalCost As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents lblCost As Label
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ContactInfoToolStripMenuItem As ToolStripMenuItem
 End Class

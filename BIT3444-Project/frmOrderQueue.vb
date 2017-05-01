@@ -383,4 +383,12 @@
     Private Sub btnEditOrder_Click(sender As Object, e As EventArgs) Handles btnEditOrder.Click
         frmDatabase.Show()
     End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+
+    End Sub
+
+    Private Sub ContactInfoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContactInfoToolStripMenuItem.Click
+        frmContact.Show()
+    End Sub
 End Class

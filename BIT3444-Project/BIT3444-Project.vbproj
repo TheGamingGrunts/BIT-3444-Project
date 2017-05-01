@@ -93,6 +93,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmContact.Designer.vb">
+      <DependentUpon>frmContact.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmContact.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmDatabase.Designer.vb">
       <DependentUpon>frmDatabase.vb</DependentUpon>
     </Compile>
@@ -155,6 +161,9 @@
     <EmbeddedResource Include="AddOrder.resx">
       <DependentUpon>AddOrder.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmContact.resx">
+      <DependentUpon>frmContact.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDatabase.resx">
       <DependentUpon>frmDatabase.vb</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +217,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="map.png" />
+    <None Include="Resources\DanielSlutsky2.jpg" />
+    <None Include="Resources\AlecJordan.jpg" />
+    <None Include="Resources\picture.jpg" />
+    <None Include="Resources\KyleChong.jpg" />
+    <None Include="Resources\DanielSlutsky1.jpg" />
+    <None Include="Resources\DanielSlutsky.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
