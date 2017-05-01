@@ -2,6 +2,7 @@
 
     Dim myNet As New Network
     Dim myDatabase As Database
+    Dim opt As New Optimization
     Dim arcSortedList As SortedList(Of String, Arc)
     Dim nodeSortedList As SortedList(Of String, Node)
     Public Shared orderList As SortedList(Of String, Order)
@@ -48,16 +49,29 @@
     End Sub
 
     Public Function SolverOptimization(orig As String, dest As String, ByRef length As Double) As List(Of TArc)
-        Dim opt As New Optimization
+
+        Dim inf As Decimal = 1000000000
+
+        If orig = dest Then
+            length = inf
+            Return Nothing
+        End If
+
+        ' initialize network
+        For Each a In myNet.ArcList.Values
+            a.Flow = 0
+        Next
+
+        ' Initialize Solver
         opt.InitSolver()
 
-        Dim inf As Double = Double.MaxValue
-
-        For Each a In arcSortedList.Values
+        ' Create variables
+        For Each a In myNet.ArcList.Values
             opt.AddVar(a.ID, 0, 1)
         Next
 
-        For Each n In nodeSortedList.Values
+        ' Create Constraints
+        For Each n In myNet.NodeList.Values
             Dim rhs As Integer
             Select Case n.ID
                 Case orig
@@ -74,35 +88,36 @@
             For Each a In n.ArcsOut
                 opt.SetCoef(n.ID, a.ID, -1)
             Next
-
-            'create objective
-            opt.AddObj("obj")
-            For Each a In arcSortedList.Values
-                opt.SetCoef("obj", a.ID, a.Cost) 'a.distance
-            Next
-
-            opt.SolveModel("obj", True)
-            If opt.IsOptimal() Then
-                Dim list As New List(Of TArc)
-                Dim node As Node = nodeSortedList(orig)
-                If n.ID <> dest Then
-
-                    For Each a In n.ArcsOut
-                        If opt.GetVarValue(a.ID) > 0.1 Then
-                            list.Add(a)
-                            length += a.Cost 'a.distance
-                            n = a.HeadNode
-                            Exit For
-                        End If
-                    Next
-                End If
-                Return list
-            Else
-                length = inf
-                Return Nothing
-            End If
         Next
-        Return Nothing
+
+        ' Create objective and solve model
+        opt.AddObj("obj")
+        For Each a In myNet.ArcList.Values
+            opt.SetCoef("obj", a.ID, a.Cost)
+        Next
+        opt.SolveModel("obj", True)
+
+        ' Get results
+        If opt.IsOptimal() Then
+            Dim list As New List(Of TArc)
+            Dim n As Node = myNet.NodeList(dest)
+            length = 0
+            Do While n.ID <> orig
+                For Each a In n.ArcsIn
+                    If opt.GetVarValue(a.ID) > 0.01 Then
+                        list.Insert(0, a.toTArc)
+                        length += 1
+                        n = a.TailNode
+                        Exit For
+                    End If
+                Next
+            Loop
+            Return list
+        Else
+            length = inf
+            Return Nothing
+        End If
+
     End Function
 
     'creates the network of nodes and arcs
@@ -128,7 +143,7 @@
     End Sub
 
     'Sorts the waiting list in ascending or descending order based on length
-    Private Sub SortWaitingList()
+    Public Sub SortWaitingList()
         Dim sortedWait
         Dim sortedDeiliver
 
@@ -322,7 +337,6 @@
         Loop
     End Sub
 
-<<<<<<< HEAD
     Private Sub lstDelivered_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstDelivered.SelectedIndexChanged
         Dim order As Order = Nothing
         For Each o In delivered
@@ -332,17 +346,37 @@
                 Exit For
             End If
         Next
-        Dim str As String = ""
+        Dim str As String = "Length: " & order.Length & vbCrLf & "Cost: " & order.getTotalCost & vbCrLf
         For Each path In order.Path
-            str &= "Path: " & path.HeadNode.ID & ":" & path.TailNode.ID & vbCrLf
+            str &= "Path: " & path.TailNode.ID & ":" & path.HeadNode.ID & vbCrLf
             For Each arc In path.PathList
                 str &= arc.ToString
             Next
         Next
-        MessageBox.Show(str)
-=======
-    Private Sub OrderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrderToolStripMenuItem.Click
 
->>>>>>> c919830224e3d81252212a4d0f777c1564988383
+        txtTotalCost.Text = order.getTotalCost()
+        MessageBox.Show(str)
+    End Sub
+
+    Private Sub AscendingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AscendingToolStripMenuItem.Click
+        IsAscending = True
+        SortWaitingList()
+    End Sub
+
+    Private Sub DescendingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DescendingToolStripMenuItem.Click
+        IsAscending = False
+        SortWaitingList()
+    End Sub
+
+    Private Sub LabelCorrectingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LabelCorrectingToolStripMenuItem.Click
+        solveOption = True
+        SendOrdersLabelCorrecting()
+        SortWaitingList()
+    End Sub
+
+    Private Sub LinearOptimizationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LinearOptimizationToolStripMenuItem.Click
+        solveOption = False
+        SendOrdersSolver()
+        SortWaitingList()
     End Sub
 End Class

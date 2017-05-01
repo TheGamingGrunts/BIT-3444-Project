@@ -29,4 +29,13 @@
         Dim str As String = "Order #" & ID
         Return str
     End Function
+
+    Public Function getTotalCost() As Double
+        Dim totalCost As Double
+        For Each p In Path
+            totalCost += p.Cost
+        Next
+
+        Return totalCost
+    End Function
 End Class

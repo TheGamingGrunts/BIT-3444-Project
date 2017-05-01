@@ -81,4 +81,77 @@ Public Class Optimization
     Public Function IsOptimal() As Boolean
         Return myModel.LpResult = 2
     End Function
+
+    Public Function ShortestPath(net As Network, orig As String, dest As String,
+                                      ByRef length As Decimal) As List(Of TArc)
+
+        Dim inf As Decimal = 1000000000
+
+        If orig = dest Then
+            length = inf
+            Return Nothing
+        End If
+
+        ' initialize network
+        For Each a In net.ArcList.Values
+            a.Flow = 0
+        Next
+
+        ' Initialize Solver
+        InitSolver()
+
+        ' Create variables
+        For Each a In net.ArcList.Values
+            AddVar(a.ID, 0, 1)
+        Next
+
+        ' Create Constraints
+        For Each n In net.NodeList.Values
+            Dim rhs As Integer
+            Select Case n.ID
+                Case orig
+                    rhs = -1
+                Case dest
+                    rhs = 1
+                Case Else
+                    rhs = 0
+            End Select
+            AddFun(n.ID, rhs, rhs)
+            For Each a In n.ArcsIn
+                SetCoef(n.ID, a.ID, 1)
+            Next
+            For Each a In n.ArcsOut
+                SetCoef(n.ID, a.ID, -1)
+            Next
+        Next
+
+        ' Create objective and solve model
+        AddObj("obj")
+        For Each a In net.ArcList.Values
+            SetCoef("obj", a.ID, a.Cost)
+        Next
+        SolveModel("obj", True)
+
+        ' Get results
+        If IsOptimal() Then
+            Dim list As New List(Of TArc)
+            Dim n As Node = net.NodeList(dest)
+            length = 0
+            Do While n.ID <> orig
+                For Each a In n.ArcsIn
+                    If GetVarValue(a.ID) > 0.01 Then
+                        list.Insert(0, a.toTArc)
+                        length += a.Cost
+                        n = a.TailNode
+                        Exit For
+                    End If
+                Next
+            Loop
+            Return list
+        Else
+            length = inf
+            Return Nothing
+        End If
+
+    End Function
 End Class
