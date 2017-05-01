@@ -69,3 +69,4 @@ C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project
 C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmOrderQueue.resources
 C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444_Project.Resources.resources
 C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project.vbproj.GenerateResource.Cache
+C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\obj\Debug\BIT3444_Project.frmDatabase.resources

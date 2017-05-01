@@ -27,5 +27,130 @@ BIT3444-Project
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="T:BIT3444_Project.DatabaseDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSet.ArcsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSet.CitiesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSet.OrdersDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSet.UsersDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSet.ArcsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSet.CitiesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSet.OrdersRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSet.UsersRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSet.ArcsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSet.CitiesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSet.OrdersRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSet.UsersRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSetTableAdapters.ArcsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSetTableAdapters.CitiesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSetTableAdapters.OrdersTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSetTableAdapters.UsersTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:BIT3444_Project.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(BIT3444_Project.DatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:BIT3444_Project.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(BIT3444_Project.DatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:BIT3444_Project.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(BIT3444_Project.DatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:BIT3444_Project.DatabaseDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:BIT3444_Project.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateAll(BIT3444_Project.DatabaseDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:BIT3444_Project.DatabaseDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 </members>
 </doc>

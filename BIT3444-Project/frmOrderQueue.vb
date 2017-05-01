@@ -44,7 +44,7 @@
     End Sub
 
     ' Opens a form that allows the user to add an order
-    Private Sub btnAddOrder_Click(sender As Object, e As EventArgs) 
+    Private Sub btnAddOrder_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -378,5 +378,9 @@
         solveOption = False
         SendOrdersSolver()
         SortWaitingList()
+    End Sub
+
+    Private Sub btnEditOrder_Click(sender As Object, e As EventArgs) Handles btnEditOrder.Click
+        frmDatabase.Show()
     End Sub
 End Class
