@@ -5,14 +5,14 @@
     Public Property Distance As Decimal
     Public Property Cost As Decimal
     Public Property Capacity As Integer
+    Public Property Flow As Integer
 
-    'Empty/Unused default constructor
     Public Sub New()
 
     End Sub
 
     'Sets the node's properties upon creation
-    Public Sub New(tail As Node, head As Node, dist As Decimal, cost As Decimal)
+    Public Sub New(tail As Node, head As Node, dist As Decimal, arcCost As Decimal)
         'Checks for errors
         Try
             If tail Is Nothing Or head Is Nothing Then
@@ -21,8 +21,9 @@
             TailNode = tail
             HeadNode = head
             Distance = dist
-            cost = cost
+            Cost = arcCost
             ID = TailNode.ID & "-TO-" & HeadNode.ID
+            Flow = 0
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Arc error")
         End Try
@@ -40,6 +41,7 @@
         newTArc.Distance = Distance
         newTArc.Cost = Cost
         newTArc.Capacity = Capacity
+        newTArc.Flow = Flow
 
         Return newTArc
     End Function

@@ -17,6 +17,7 @@
             frmOrderQueue.IsAscending = False
         End If
 
+        frmOrderQueue.SortWaitingList()
         Me.Close()
 
     End Sub
