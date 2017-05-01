@@ -358,6 +358,7 @@
         MessageBox.Show(str)
     End Sub
 
+<<<<<<< HEAD
     Private Sub AscendingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AscendingToolStripMenuItem.Click
         IsAscending = True
         SortWaitingList()
@@ -378,5 +379,9 @@
         solveOption = False
         SendOrdersSolver()
         SortWaitingList()
+=======
+    Private Sub OrderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrderToolStripMenuItem.Click
+
+>>>>>>> origin/master
     End Sub
 End Class
