@@ -342,7 +342,6 @@
         For Each o In delivered
             If o.ID = Strings.Replace(lstDelivered.SelectedItem, "Order #", "") Then
                 order = o
-                MessageBox.Show("Success")
                 Exit For
             End If
         Next
@@ -355,6 +354,14 @@
         Next
 
         txtTotalCost.Text = order.getTotalCost()
+
+        Dim newMap As New frmMap
+        newMap.Net = myNet
+        newMap.Origin = order.Origin
+        newMap.Destination = order.Destination
+        newMap.Path = order.Path
+        newMap.ShowDialog()
+
         MessageBox.Show(str)
     End Sub
 

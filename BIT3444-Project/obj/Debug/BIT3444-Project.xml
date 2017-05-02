@@ -22,7 +22,37 @@ BIT3444-Project
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:BIT3444_Project.My.Resources.Resources.AlecJordan">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BIT3444_Project.My.Resources.Resources.DanielSlutsky">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BIT3444_Project.My.Resources.Resources.DanielSlutsky1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BIT3444_Project.My.Resources.Resources.DanielSlutsky2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BIT3444_Project.My.Resources.Resources.KyleChong">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:BIT3444_Project.My.Resources.Resources.map">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BIT3444_Project.My.Resources.Resources.picture">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
