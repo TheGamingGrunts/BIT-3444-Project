@@ -29,6 +29,7 @@
 
     ' Causes close button to stop the program
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        My.Forms.frmWelcome.Show()
         frmContainer.Close()
     End Sub
 

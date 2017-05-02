@@ -114,7 +114,7 @@ Partial Class frmOrderQueue
         Me.btnEditOrder.Name = "btnEditOrder"
         Me.btnEditOrder.Size = New System.Drawing.Size(177, 44)
         Me.btnEditOrder.TabIndex = 14
-        Me.btnEditOrder.Text = "Edit Order"
+        Me.btnEditOrder.Text = "View Orders"
         Me.btnEditOrder.UseVisualStyleBackColor = True
         '
         'MenuStrip1
@@ -188,7 +188,7 @@ Partial Class frmOrderQueue
         '
         'txtTotalCost
         '
-        Me.txtTotalCost.Location = New System.Drawing.Point(309, 402)
+        Me.txtTotalCost.Location = New System.Drawing.Point(308, 415)
         Me.txtTotalCost.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtTotalCost.Name = "txtTotalCost"
         Me.txtTotalCost.ReadOnly = True
@@ -206,7 +206,7 @@ Partial Class frmOrderQueue
         'lblCost
         '
         Me.lblCost.AutoSize = True
-        Me.lblCost.Location = New System.Drawing.Point(232, 404)
+        Me.lblCost.Location = New System.Drawing.Point(231, 417)
         Me.lblCost.Name = "lblCost"
         Me.lblCost.Size = New System.Drawing.Size(76, 17)
         Me.lblCost.TabIndex = 19
@@ -214,7 +214,7 @@ Partial Class frmOrderQueue
         '
         'txtOutput
         '
-        Me.txtOutput.Location = New System.Drawing.Point(13, 471)
+        Me.txtOutput.Location = New System.Drawing.Point(13, 486)
         Me.txtOutput.Multiline = True
         Me.txtOutput.Name = "txtOutput"
         Me.txtOutput.ReadOnly = True
@@ -225,17 +225,17 @@ Partial Class frmOrderQueue
         'lblPath
         '
         Me.lblPath.AutoSize = True
-        Me.lblPath.Location = New System.Drawing.Point(188, 451)
+        Me.lblPath.Location = New System.Drawing.Point(177, 466)
         Me.lblPath.Name = "lblPath"
-        Me.lblPath.Size = New System.Drawing.Size(44, 17)
+        Me.lblPath.Size = New System.Drawing.Size(78, 17)
         Me.lblPath.TabIndex = 21
-        Me.lblPath.Text = "Paths"
+        Me.lblPath.Text = "Order Path"
         '
         'frmOrderQueue
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(432, 574)
+        Me.ClientSize = New System.Drawing.Size(432, 590)
         Me.ControlBox = False
         Me.Controls.Add(Me.lblPath)
         Me.Controls.Add(Me.txtOutput)

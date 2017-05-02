@@ -17,6 +17,7 @@
             If txtUsername.Text = u.Key Then
                 If txtPassword.Text = u.Value Then
                     frmContainer.Show()
+                    Me.Hide()
                     Exit Sub
                 End If
             End If
