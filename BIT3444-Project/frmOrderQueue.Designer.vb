@@ -37,11 +37,13 @@ Partial Class frmOrderQueue
         Me.SortByToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AscendingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DescendingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContactInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.txtTotalCost = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblCost = New System.Windows.Forms.Label()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ContactInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.txtOutput = New System.Windows.Forms.TextBox()
+        Me.lblPath = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,7 +51,7 @@ Partial Class frmOrderQueue
         '
         Me.lstWaiting.FormattingEnabled = True
         Me.lstWaiting.ItemHeight = 16
-        Me.lstWaiting.Location = New System.Drawing.Point(17, 84)
+        Me.lstWaiting.Location = New System.Drawing.Point(17, 58)
         Me.lstWaiting.Margin = New System.Windows.Forms.Padding(4)
         Me.lstWaiting.Name = "lstWaiting"
         Me.lstWaiting.Size = New System.Drawing.Size(173, 276)
@@ -58,7 +60,7 @@ Partial Class frmOrderQueue
         'lblWaiting
         '
         Me.lblWaiting.AutoSize = True
-        Me.lblWaiting.Location = New System.Drawing.Point(16, 64)
+        Me.lblWaiting.Location = New System.Drawing.Point(16, 38)
         Me.lblWaiting.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblWaiting.Name = "lblWaiting"
         Me.lblWaiting.Size = New System.Drawing.Size(103, 17)
@@ -68,7 +70,7 @@ Partial Class frmOrderQueue
         'lblDelivered
         '
         Me.lblDelivered.AutoSize = True
-        Me.lblDelivered.Location = New System.Drawing.Point(232, 64)
+        Me.lblDelivered.Location = New System.Drawing.Point(232, 38)
         Me.lblDelivered.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDelivered.Name = "lblDelivered"
         Me.lblDelivered.Size = New System.Drawing.Size(116, 17)
@@ -79,7 +81,7 @@ Partial Class frmOrderQueue
         '
         Me.lstDelivered.FormattingEnabled = True
         Me.lstDelivered.ItemHeight = 16
-        Me.lstDelivered.Location = New System.Drawing.Point(235, 85)
+        Me.lstDelivered.Location = New System.Drawing.Point(235, 59)
         Me.lstDelivered.Margin = New System.Windows.Forms.Padding(4)
         Me.lstDelivered.Name = "lstDelivered"
         Me.lstDelivered.Size = New System.Drawing.Size(177, 276)
@@ -87,7 +89,7 @@ Partial Class frmOrderQueue
         '
         'btnSolve
         '
-        Me.btnSolve.Location = New System.Drawing.Point(12, 422)
+        Me.btnSolve.Location = New System.Drawing.Point(12, 404)
         Me.btnSolve.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSolve.Name = "btnSolve"
         Me.btnSolve.Size = New System.Drawing.Size(177, 44)
@@ -97,7 +99,7 @@ Partial Class frmOrderQueue
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(235, 422)
+        Me.btnClose.Location = New System.Drawing.Point(235, 352)
         Me.btnClose.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(177, 44)
@@ -107,7 +109,7 @@ Partial Class frmOrderQueue
         '
         'btnEditOrder
         '
-        Me.btnEditOrder.Location = New System.Drawing.Point(13, 370)
+        Me.btnEditOrder.Location = New System.Drawing.Point(13, 352)
         Me.btnEditOrder.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEditOrder.Name = "btnEditOrder"
         Me.btnEditOrder.Size = New System.Drawing.Size(177, 44)
@@ -137,7 +139,7 @@ Partial Class frmOrderQueue
         '
         Me.OrderToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LabelCorrectingToolStripMenuItem, Me.LinearOptimizationToolStripMenuItem})
         Me.OrderToolStripMenuItem.Name = "OrderToolStripMenuItem"
-        Me.OrderToolStripMenuItem.Size = New System.Drawing.Size(206, 26)
+        Me.OrderToolStripMenuItem.Size = New System.Drawing.Size(207, 26)
         Me.OrderToolStripMenuItem.Text = "Optimization Type"
         '
         'LabelCorrectingToolStripMenuItem
@@ -156,7 +158,7 @@ Partial Class frmOrderQueue
         '
         Me.SortByToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AscendingToolStripMenuItem, Me.DescendingToolStripMenuItem})
         Me.SortByToolStripMenuItem.Name = "SortByToolStripMenuItem"
-        Me.SortByToolStripMenuItem.Size = New System.Drawing.Size(206, 26)
+        Me.SortByToolStripMenuItem.Size = New System.Drawing.Size(207, 26)
         Me.SortByToolStripMenuItem.Text = "Sort By"
         '
         'AscendingToolStripMenuItem
@@ -171,9 +173,22 @@ Partial Class frmOrderQueue
         Me.DescendingToolStripMenuItem.Size = New System.Drawing.Size(162, 26)
         Me.DescendingToolStripMenuItem.Text = "Descending"
         '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContactInfoToolStripMenuItem})
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(62, 24)
+        Me.ToolStripMenuItem1.Text = "About"
+        '
+        'ContactInfoToolStripMenuItem
+        '
+        Me.ContactInfoToolStripMenuItem.Name = "ContactInfoToolStripMenuItem"
+        Me.ContactInfoToolStripMenuItem.Size = New System.Drawing.Size(165, 26)
+        Me.ContactInfoToolStripMenuItem.Text = "Contact Info"
+        '
         'txtTotalCost
         '
-        Me.txtTotalCost.Location = New System.Drawing.Point(86, 473)
+        Me.txtTotalCost.Location = New System.Drawing.Point(309, 402)
         Me.txtTotalCost.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtTotalCost.Name = "txtTotalCost"
         Me.txtTotalCost.ReadOnly = True
@@ -191,31 +206,39 @@ Partial Class frmOrderQueue
         'lblCost
         '
         Me.lblCost.AutoSize = True
-        Me.lblCost.Location = New System.Drawing.Point(9, 475)
+        Me.lblCost.Location = New System.Drawing.Point(232, 404)
         Me.lblCost.Name = "lblCost"
         Me.lblCost.Size = New System.Drawing.Size(76, 17)
         Me.lblCost.TabIndex = 19
         Me.lblCost.Text = "Total Cost:"
         '
-        'ToolStripMenuItem1
+        'txtOutput
         '
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContactInfoToolStripMenuItem})
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(62, 24)
-        Me.ToolStripMenuItem1.Text = "About"
+        Me.txtOutput.Location = New System.Drawing.Point(13, 471)
+        Me.txtOutput.Multiline = True
+        Me.txtOutput.Name = "txtOutput"
+        Me.txtOutput.ReadOnly = True
+        Me.txtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtOutput.Size = New System.Drawing.Size(399, 91)
+        Me.txtOutput.TabIndex = 20
         '
-        'ContactInfoToolStripMenuItem
+        'lblPath
         '
-        Me.ContactInfoToolStripMenuItem.Name = "ContactInfoToolStripMenuItem"
-        Me.ContactInfoToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.ContactInfoToolStripMenuItem.Text = "Contact Info"
+        Me.lblPath.AutoSize = True
+        Me.lblPath.Location = New System.Drawing.Point(188, 451)
+        Me.lblPath.Name = "lblPath"
+        Me.lblPath.Size = New System.Drawing.Size(44, 17)
+        Me.lblPath.TabIndex = 21
+        Me.lblPath.Text = "Paths"
         '
         'frmOrderQueue
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(432, 506)
+        Me.ClientSize = New System.Drawing.Size(432, 574)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblPath)
+        Me.Controls.Add(Me.txtOutput)
         Me.Controls.Add(Me.lblCost)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtTotalCost)
@@ -257,4 +280,6 @@ Partial Class frmOrderQueue
     Friend WithEvents lblCost As Label
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ContactInfoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents txtOutput As TextBox
+    Friend WithEvents lblPath As Label
 End Class

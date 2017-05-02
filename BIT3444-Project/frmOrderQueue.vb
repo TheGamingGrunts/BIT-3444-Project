@@ -345,9 +345,9 @@
                 Exit For
             End If
         Next
-        Dim str As String = "Length: " & order.Length & vbCrLf & "Cost: " & order.getTotalCost & vbCrLf
+        Dim str As String = "Length: " & order.Length & vbCrLf
         For Each path In order.Path
-            str &= "Path: " & path.TailNode.ID & ":" & path.HeadNode.ID & vbCrLf
+            str &= "Path: " & path.TailNode.ID & " -> " & path.HeadNode.ID & vbCrLf
             For Each arc In path.PathList
                 str &= arc.ToString
             Next
@@ -360,10 +360,21 @@
         newMap.Origin = order.Origin
         newMap.Destination = order.Destination
         newMap.Path = order.Path
-        newMap.ShowDialog()
+        newMap.MdiParent = frmContainer
+        My.Forms.frmContainer.spcMain.Panel2.Controls.Add(newMap)
+        newMap.WindowState = FormWindowState.Maximized
+        newMap.Show()
 
-        MessageBox.Show(str)
+        txtOutput.Text = str
     End Sub
+
+    Public Shared Function GetForm(text As String) As Form
+        For Each f In Application.OpenForms
+            If f.text = text Then
+                Return f
+            End If
+        Next
+    End Function
 
     Private Sub AscendingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AscendingToolStripMenuItem.Click
         IsAscending = True

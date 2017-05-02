@@ -72,3 +72,8 @@ C:\Users\Alec\Desktop\BIT-3444-Project\BIT3444-Project\obj\Debug\BIT3444-Project
 C:\Users\Kyle\Documents\College\Spring 2017\BIT3444\InClass\Project\GitHub Repository\BIT3444-Project\obj\Debug\BIT3444_Project.frmDatabase.resources
 C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmContact.resources
 C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\obj\Debug\BIT3444_Project.frmDatabase.resources
+C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\bin\Debug\DatabaseDataSet.Designer.vb
+C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\bin\Debug\DatabaseDataSet.xsc
+C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\bin\Debug\DatabaseDataSet.xsd
+C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\bin\Debug\DatabaseDataSet.xss
+C:\Users\Daniel\Desktop\College\Junior\Spring 2017\BIT 3444 - Adv Business Comp & Applications\Project\BIT3444-Project\bin\Debug\Database.vb

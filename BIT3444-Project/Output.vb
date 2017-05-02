@@ -29,7 +29,7 @@
             LabelCorrecting()
             SortWaitingList()
         Else
-            'SolverOptimization()
+            SolverOptimization()
         End If
     End Sub
 

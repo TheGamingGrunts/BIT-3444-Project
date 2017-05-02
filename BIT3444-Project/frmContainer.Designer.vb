@@ -31,23 +31,22 @@ Partial Class frmContainer
         '
         Me.spcMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.spcMain.Location = New System.Drawing.Point(0, 0)
-        Me.spcMain.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.spcMain.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.spcMain.Name = "spcMain"
-        Me.spcMain.Size = New System.Drawing.Size(950, 499)
-        Me.spcMain.SplitterDistance = 326
-        Me.spcMain.SplitterWidth = 3
+        Me.spcMain.Size = New System.Drawing.Size(1267, 614)
+        Me.spcMain.SplitterDistance = 434
         Me.spcMain.TabIndex = 1
         '
         'frmContainer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(950, 499)
+        Me.ClientSize = New System.Drawing.Size(1267, 614)
         Me.Controls.Add(Me.spcMain)
         Me.IsMdiContainer = True
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "frmContainer"
-        Me.Text = "frmContainer"
+        Me.Text = "The Optimizer"
         CType(Me.spcMain, System.ComponentModel.ISupportInitialize).EndInit()
         Me.spcMain.ResumeLayout(False)
         Me.ResumeLayout(False)
